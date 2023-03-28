@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import StatusPanel from "../misc/statusPanel";
 
 export default class TextureManager {
   private static _instance: TextureManager;
@@ -27,7 +28,7 @@ export default class TextureManager {
       } else {
         const loader = new THREE.TextureLoader();
         loader.load(
-          `/assets/${path}`,
+          `/assets/texture/${path}`,
           (texture) => {
             this._textures.set(name, texture);
             resolve(texture);
@@ -41,10 +42,22 @@ export default class TextureManager {
     });
   }
 
-  public loadTextures(textures: { [name: string]: string }): Promise<Array<THREE.Texture | undefined>> {
-    return Promise.all(
-      Object.keys(textures).map((name) => {
-        return this.loadTexture(name, textures[name]);
+  public async loadTextures(): Promise<Array<THREE.Texture | undefined>> {
+    
+    const textures: {
+      name: string;
+      file: string;
+    }[] = await fetch("/list/texture").then((response) => response.json());
+    
+    let textureCount = 0;
+    let textureTotal = textures.length;
+
+    return await Promise.all(
+        textures.map(async (texture) => {
+        const t = await this.loadTexture(texture.name, texture.file);
+        textureCount++;
+        StatusPanel.status = `Loading textures: ${textureCount}/${textureTotal}`;
+        return t;
       })
     );
   }

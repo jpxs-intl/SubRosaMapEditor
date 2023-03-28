@@ -1,15 +1,19 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import blockList from "./lists/blockList";
-import BuildingList from "./lists/buildingList";
-import TextureList from "./lists/textureList";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
+import { Font, FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import BlockManager from "./managers/blockManager";
 import BuildingManager from "./managers/buildingManager";
 import TextureManager from "./managers/textureManager";
 import Enviroment from "./misc/enviroment";
-import MouseCastHandler from "./misc/mouseCastHandler";
-import SelectionHandler from "./misc/selectionHandler";
+import MouseCastHandler from "./controls/mouseCastHandler";
+import SelectionHandler from "./controls/selectionHandler";
 import StatusPanel from "./misc/statusPanel";
+import FileInputHandler from "./misc/dragAndDropHandler";
+import Toolbar from "./controls/toolbar/toolbar";
+import KeyboardShortcuts from "./controls/keyboardShortcuts";
+import DragAndDropHandler from "./misc/dragAndDropHandler";
+import BuildBlockManager from "./managers/buildBlockManager";
 
 export default class Main {
   private static _instance: Main;
@@ -18,6 +22,8 @@ export default class Main {
   private _scene: THREE.Scene;
   private _camera: THREE.PerspectiveCamera;
   private _controls: OrbitControls;
+  private _fontLoader: FontLoader;
+  private _font!: Font;
 
   private _lastTime: number = 0;
 
@@ -35,12 +41,15 @@ export default class Main {
     this._scene = new THREE.Scene();
     this._camera = new THREE.PerspectiveCamera(75, 2, 0.1, 1000);
 
-    this._camera.position.set(0, 0, 2);
+    this._camera.position.set(100, 50, 100);
 
     this._controls = new OrbitControls(this._camera, this._canvas);
 
     this._controls.enableDamping = false;
     this._controls.enableZoom = true;
+    this._controls.zoomSpeed = 2;
+
+    this._fontLoader = new FontLoader();
   }
 
   private render(time: number) {
@@ -77,6 +86,10 @@ export default class Main {
     return Main.instance._controls;
   }
 
+  public static get font(): Font {
+    return Main.instance._font;
+  }
+
   public static enableControls() {
     Main.instance._controls.enabled = true;
   }
@@ -87,18 +100,28 @@ export default class Main {
 
   public async init() {
     // load editor modules
-    StatusPanel.status = "Loading textures...";
-    await TextureManager.instance.loadTextures(TextureList);
-    StatusPanel.status = "Loading blocks...";
-    await BlockManager.instance.loadblocks(blockList)
-    StatusPanel.status = "Loading buildings...";
-    await BuildingManager.instance.loadBuildings(BuildingList);
+    // StatusPanel.status = "Loading textures...";
+    // await TextureManager.instance.loadTextures();
+    // StatusPanel.status = "Loading blocks...";
+    // await BlockManager.instance.loadblocks();
+    // StatusPanel.status = "Loading Build Blocks...";
+    // await BuildBlockManager.instance.loadblocks();
+    // StatusPanel.status = "Loading buildings...";
+    // await BuildingManager.instance.loadBuildings();
+    // StatusPanel.status = "Loading font...";
+    this._font = await this._fontLoader.loadAsync("/assets/fonts/helvetiker_regular.typeface.json");
     StatusPanel.status = "Loading enviroment...";
     Enviroment.instance.init();
     MouseCastHandler.init();
-    SelectionHandler.instance.init();
+    // SelectionHandler.instance.init();
+    Toolbar.init();
+    KeyboardShortcuts.init();
+    DragAndDropHandler.init();
 
     StatusPanel.status = "Ready";
+
+    console.log("Editor ready!");
+    console.log(Array.from(BuildingManager.instance.getAllBuildings().entries()));
 
     this.start();
 

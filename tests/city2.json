@@ -1,0 +1,5154 @@
+{
+    "version": 10,
+    "itemSetQuanity": 11,
+    "itemSets": [
+        "ext-mailbox-dobbs",
+        "ext-mailbox-dobbs",
+        "ext-mailbox-wrestling",
+        "ext-dumpster",
+        "base-table-empty",
+        "ext-park-basketballhoop",
+        "ext-street-hydrant",
+        "ext-park-bench",
+        "ext-park-bikerack",
+        "ext-park-lightpost",
+        "ext-park-trashcan"
+    ],
+    "interscetionQuanity": 52,
+    "intersections": [
+        {
+            "x": 256,
+            "y": 6,
+            "z": 2562
+        },
+        {
+            "x": 294,
+            "y": 6,
+            "z": 256
+        },
+        {
+            "x": 294,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 256,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 332,
+            "y": 6,
+            "z": 256
+        },
+        {
+            "x": 332,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 371,
+            "y": 6,
+            "z": 256
+        },
+        {
+            "x": 371,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 256,
+            "y": 6,
+            "z": 308
+        },
+        {
+            "x": 294,
+            "y": 6,
+            "z": 308
+        },
+        {
+            "x": 332,
+            "y": 6,
+            "z": 308
+        },
+        {
+            "x": 371,
+            "y": 9,
+            "z": 320
+        },
+        {
+            "x": 332,
+            "y": 6,
+            "z": 320
+        },
+        {
+            "x": 371,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 332,
+            "y": 6,
+            "z": 438
+        },
+        {
+            "x": 294,
+            "y": 9,
+            "z": 400
+        },
+        {
+            "x": 332,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 294,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 256,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 332,
+            "y": 9,
+            "z": 400
+        },
+        {
+            "x": 486,
+            "y": 6,
+            "z": 256
+        },
+        {
+            "x": 294,
+            "y": 9,
+            "z": 334
+        },
+        {
+            "x": 410,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 410,
+            "y": 15,
+            "z": 388
+        },
+        {
+            "x": 380,
+            "y": 15,
+            "z": 388
+        },
+        {
+            "x": 448,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 448,
+            "y": 9,
+            "z": 400
+        },
+        {
+            "x": 486,
+            "y": 6,
+            "z": 400
+        },
+        {
+            "x": 486,
+            "y": 6,
+            "z": 426
+        },
+        {
+            "x": 448,
+            "y": 6,
+            "z": 426
+        },
+        {
+            "x": 380,
+            "y": 12,
+            "z": 414
+        },
+        {
+            "x": 410,
+            "y": 12,
+            "z": 414
+        },
+        {
+            "x": 488,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 486,
+            "y": 6,
+            "z": 360
+        },
+        {
+            "x": 486,
+            "y": 6,
+            "z": 308
+        },
+        {
+            "x": 380,
+            "y": 12,
+            "z": 426
+        },
+        {
+            "x": 410,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 410,
+            "y": 6,
+            "z": 256
+        },
+        {
+            "x": 448,
+            "y": 6,
+            "z": 256
+        },
+        {
+            "x": 448,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 410,
+            "y": 6,
+            "z": 308
+        },
+        {
+            "x": 448,
+            "y": 6,
+            "z": 308
+        },
+        {
+            "x": 486,
+            "y": 6,
+            "z": 282
+        },
+        {
+            "x": 294,
+            "y": 6,
+            "z": 438
+        },
+        {
+            "x": 268,
+            "y": 6,
+            "z": 400
+        },
+        {
+            "x": 268,
+            "y": 6,
+            "z": 438
+        },
+        {
+            "x": 448,
+            "y": 6,
+            "z": 320
+        },
+        {
+            "x": 401,
+            "y": 9,
+            "z": 320
+        },
+        {
+            "x": 401,
+            "y": 9,
+            "z": 332
+        },
+        {
+            "x": 410,
+            "y": 9,
+            "z": 332
+        },
+        {
+            "x": 224,
+            "y": 12,
+            "z": 360
+        },
+        {
+            "x": 520,
+            "y": 12,
+            "z": 360
+        }
+    ],
+    "streetQuanity": 69,
+    "streets": [
+        {
+            "intersectionNumber": [
+                0,
+                1
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                1,
+                2
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                3,
+                2
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                0,
+                3
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                1,
+                4
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                4,
+                5
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                2,
+                5
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                4,
+                6
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                6,
+                7
+            ],
+            "direction": 1,
+            "leftLane": 4,
+            "rightLane": 4,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                5,
+                7
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                3,
+                8
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                8,
+                9
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                2,
+                9
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                9,
+                10
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                5,
+                10
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                7,
+                11
+            ],
+            "direction": 1,
+            "leftLane": 4,
+            "rightLane": 4,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                12,
+                11
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                10,
+                12
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                11,
+                13
+            ],
+            "direction": 1,
+            "leftLane": 4,
+            "rightLane": 4,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                19,
+                14
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                21,
+                15
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                16,
+                13
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                17,
+                16
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                18,
+                17
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                16,
+                19
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                20,
+                42
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                9,
+                21
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                15,
+                19
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                13,
+                22
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                22,
+                23
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                24,
+                23
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                22,
+                25
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                25,
+                26
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                26,
+                27
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                27,
+                28
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                29,
+                28
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                26,
+                29
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                24,
+                30
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                30,
+                31
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                23,
+                31
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                25,
+                32
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                33,
+                27
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                41,
+                34
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                35,
+                29
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                30,
+                35
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                7,
+                36
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                37,
+                36
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                37,
+                38
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                38,
+                39
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                36,
+                39
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                36,
+                40
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                40,
+                41
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                39,
+                41
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                34,
+                33
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                39,
+                42
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                42,
+                34
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                38,
+                20
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                43,
+                14
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                15,
+                43
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                44,
+                15
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                44,
+                45
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                45,
+                43
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                41,
+                46
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                47,
+                46
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                47,
+                48
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                48,
+                49
+            ],
+            "direction": 0,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                49,
+                22
+            ],
+            "direction": 1,
+            "leftLane": 3,
+            "rightLane": 3,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                50,
+                18
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        },
+        {
+            "intersectionNumber": [
+                32,
+                51
+            ],
+            "direction": 0,
+            "leftLane": 5,
+            "rightLane": 5,
+            "streetName": "Street"
+        }
+    ],
+    "buildingQuanity": 464,
+    "buildings": [
+        {
+            "name": "parkinggarage2",
+            "position": [
+                405,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-blockhouse",
+            "position": [
+                414,
+                14,
+                396
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendongas01",
+            "position": [
+                405,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-2x1",
+            "position": [
+                383,
+                7,
+                294
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-beam-4x1",
+            "position": [
+                311,
+                8,
+                266
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-4x1",
+            "position": [
+                326,
+                8,
+                266
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ramp-yellowwarehouse",
+            "position": [
+                406,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                244,
+                6,
+                255
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                391,
+                7,
+                293
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-villatunnel-side",
+            "position": [
+                406,
+                10,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-underpass03-a",
+            "position": [
+                499,
+                6,
+                402
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                314,
+                7,
+                318
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                311,
+                6,
+                268
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendoncontainerlot01",
+            "position": [
+                442,
+                6,
+                303
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-pyrrha",
+            "position": [
+                289,
+                6,
+                312
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-signage-oxs",
+            "position": [
+                474,
+                8,
+                421
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-hotel-alamo",
+            "position": [
+                315,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pizza",
+            "position": [
+                251,
+                6,
+                311
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-robertos",
+            "position": [
+                289,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonoffice03",
+            "position": [
+                376,
+                11,
+                353
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonburger01",
+            "position": [
+                368,
+                12,
+                367
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-nopark2",
+            "position": [
+                432,
+                6,
+                296
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-stoop-c",
+            "position": [
+                289,
+                9,
+                403
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                447,
+                6,
+                336
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-firehouse",
+            "position": [
+                452,
+                6,
+                270
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "parkinggarage3",
+            "position": [
+                327,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-sign-lastexit-b",
+            "position": [
+                451,
+                13,
+                364
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendondcontainerlot02",
+            "position": [
+                457,
+                6,
+                317
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pipe-11x1",
+            "position": [
+                489,
+                9,
+                344
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-bridge-pilar",
+            "position": [
+                311,
+                10,
+                434
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonparking01",
+            "position": [
+                405,
+                6,
+                315
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-billboard-pager",
+            "position": [
+                438,
+                10,
+                288
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-hondo-bottom-c",
+            "position": [
+                438,
+                6,
+                324
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonplaza-6x4-elevated",
+            "position": [
+                347,
+                6,
+                296
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-radiostation",
+            "position": [
+                266,
+                8,
+                293
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-beam-3x1-a",
+            "position": [
+                377,
+                9,
+                299
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-hondo-bottom-d",
+            "position": [
+                438,
+                9,
+                323
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-venetian",
+            "position": [
+                392,
+                15,
+                392
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-sign-parking2-a",
+            "position": [
+                265,
+                8,
+                285
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-nopark2",
+            "position": [
+                377,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-icerink",
+            "position": [
+                355,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-4x1",
+            "position": [
+                315,
+                8,
+                313
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                452,
+                6,
+                343
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-signage-monsota",
+            "position": [
+                272,
+                8,
+                426
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-diredhow-stairs",
+            "position": [
+                359,
+                8,
+                311
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonunderparking",
+            "position": [
+                376,
+                9,
+                322
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-library-b",
+            "position": [
+                375,
+                12,
+                405
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-library-a",
+            "position": [
+                375,
+                12,
+                413
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                368,
+                12,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pipe-11x1",
+            "position": [
+                489,
+                9,
+                347
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonsunkenplaza",
+            "position": [
+                327,
+                9,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonwarehouse01",
+            "position": [
+                414,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-ramp-pinkflamingo-c",
+            "position": [
+                393,
+                12,
+                392
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-fontana",
+            "position": [
+                384,
+                12,
+                409
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-starlite",
+            "position": [
+                405,
+                15,
+                392
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pyramid-a",
+            "position": [
+                274,
+                9,
+                324
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-pinkflamingo",
+            "position": [
+                393,
+                12,
+                409
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-stairs-theater-roof-a",
+            "position": [
+                315,
+                9,
+                324
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-crane-room-01",
+            "position": [
+                426,
+                11,
+                299
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-arcade-stairs",
+            "position": [
+                304,
+                7,
+                316
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendontest1",
+            "position": [
+                364,
+                6,
+                276
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-underpass03-a",
+            "position": [
+                499,
+                6,
+                378
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-museum",
+            "position": [
+                425,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendoncontainerlot01",
+            "position": [
+                414,
+                6,
+                297
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-office-tanah-b",
+            "position": [
+                273,
+                6,
+                395
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-sign-lastexit-a",
+            "position": [
+                328,
+                13,
+                355
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-base03",
+            "position": [
+                466,
+                6,
+                421
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-helmetstore",
+            "position": [
+                358,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonramp-10x2x2",
+            "position": [
+                340,
+                6,
+                298
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-pipe-8x1",
+            "position": [
+                489,
+                12,
+                274
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x4-a",
+            "position": [
+                356,
+                12,
+                370
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-bronskiwall",
+            "position": [
+                376,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parkinggarage-stairwell",
+            "position": [
+                374,
+                12,
+                372
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-oats",
+            "position": [
+                251,
+                6,
+                266
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-house01-tan",
+            "position": [
+                473,
+                6,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-casino",
+            "position": [
+                495,
+                12,
+                366
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-sunset-ramp",
+            "position": [
+                398,
+                12,
+                418
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                452,
+                6,
+                349
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonwarehouse01",
+            "position": [
+                430,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendonoffice15-sunglass",
+            "position": [
+                348,
+                8,
+                299
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pedbridge",
+            "position": [
+                343,
+                12,
+                367
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-pipe-7x2",
+            "position": [
+                458,
+                10,
+                340
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-office-tanah-a",
+            "position": [
+                263,
+                6,
+                407
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendondcontainerlot02",
+            "position": [
+                460,
+                6,
+                312
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-pillar-underpass",
+            "position": [
+                468,
+                6,
+                364
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-storagebuilding",
+            "position": [
+                490,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-bridge-downtown",
+            "position": [
+                335,
+                11,
+                376
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-chilistore",
+            "position": [
+                365,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendondcontainerlot02",
+            "position": [
+                472,
+                6,
+                328
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-underpass03-a",
+            "position": [
+                499,
+                6,
+                390
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-stoop-b",
+            "position": [
+                290,
+                9,
+                408
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                367,
+                12,
+                398
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                360,
+                12,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-diamondplaza",
+            "position": [
+                414,
+                15,
+                380
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendontunnelpark",
+            "position": [
+                414,
+                11,
+                324
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendontunnelsign01",
+            "position": [
+                413,
+                10,
+                316
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ramp-4x4",
+            "position": [
+                315,
+                6,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendontunnelsign02",
+            "position": [
+                438,
+                8,
+                323
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendontunnelparkstairs-a",
+            "position": [
+                405,
+                9,
+                324
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-balcony-cubeparking",
+            "position": [
+                393,
+                6,
+                296
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-billboard-burgers",
+            "position": [
+                365,
+                9,
+                294
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ramp-4x4x1",
+            "position": [
+                389,
+                6,
+                296
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                392,
+                7,
+                300
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-nopark2",
+            "position": [
+                473,
+                6,
+                294
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-mangoice",
+            "position": [
+                285,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-oxs-park",
+            "position": [
+                452,
+                9,
+                404
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                351,
+                12,
+                392
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-hill-oxs",
+            "position": [
+                481,
+                6,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonfactory05",
+            "position": [
+                414,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                360,
+                12,
+                395
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonoffice01",
+            "position": [
+                376,
+                6,
+                271
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-photomat",
+            "position": [
+                375,
+                12,
+                383
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-travelagency",
+            "position": [
+                366,
+                12,
+                383
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                356,
+                8,
+                298
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-house01-tan",
+            "position": [
+                488,
+                6,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-motel",
+            "position": [
+                492,
+                6,
+                384
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-barbershop",
+            "position": [
+                346,
+                12,
+                333
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-tallsign-pyrrha-s",
+            "position": [
+                290,
+                11,
+                395
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-videostore",
+            "position": [
+                289,
+                6,
+                269
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonwarehouse02",
+            "position": [
+                478,
+                6,
+                329
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-lumbermill",
+            "position": [
+                414,
+                12,
+                353
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pipe-ramp",
+            "position": [
+                478,
+                6,
+                320
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "parkslope",
+            "position": [
+                365,
+                12,
+                353
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-blazko",
+            "position": [
+                350,
+                8,
+                315
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-base02",
+            "position": [
+                272,
+                6,
+                418
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                319,
+                6,
+                250
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                307,
+                6,
+                268
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-office-jenga",
+            "position": [
+                319,
+                6,
+                442
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-bank",
+            "position": [
+                336,
+                6,
+                304
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-bikestore",
+            "position": [
+                365,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-oiljacks",
+            "position": [
+                452,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                440,
+                6,
+                331
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-tunnel-top",
+            "position": [
+                415,
+                8,
+                316
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-tallsign-shelley",
+            "position": [
+                375,
+                12,
+                323
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                327,
+                6,
+                250
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pipe-8x1",
+            "position": [
+                489,
+                8,
+                262
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-sunset",
+            "position": [
+                388,
+                13,
+                422
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-office-naran",
+            "position": [
+                263,
+                6,
+                441
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-pipe-8x1",
+            "position": [
+                489,
+                12,
+                262
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-diredhow",
+            "position": [
+                360,
+                9,
+                315
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-ramp-dire-a",
+            "position": [
+                379,
+                7,
+                301
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonplaza-6x4-elevated-b",
+            "position": [
+                342,
+                6,
+                300
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-tunnel-bottom",
+            "position": [
+                433,
+                6,
+                316
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-plaza-yellowwarehouse",
+            "position": [
+                414,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                472,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                353,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-autorepair",
+            "position": [
+                315,
+                7,
+                324
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-tailor",
+            "position": [
+                365,
+                8,
+                305
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                365,
+                9,
+                299
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonoffice10-13x21",
+            "position": [
+                376,
+                9,
+                323
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-cubepark-eave-b",
+            "position": [
+                385,
+                7,
+                314
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonfactory07",
+            "position": [
+                431,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-deli",
+            "position": [
+                298,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-hardwarestore",
+            "position": [
+                316,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                327,
+                6,
+                268
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                304,
+                7,
+                321
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                304,
+                7,
+                323
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-beam-3x1-a",
+            "position": [
+                379,
+                9,
+                299
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                358,
+                9,
+                299
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                300,
+                7,
+                323
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendontheater",
+            "position": [
+                327,
+                6,
+                312
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-sportsgoods",
+            "position": [
+                365,
+                7,
+                298
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                315,
+                8,
+                276
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonplaza-12x12-a",
+            "position": [
+                337,
+                12,
+                353
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-mall",
+            "position": [
+                328,
+                12,
+                341
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-tallsign-kirsten",
+            "position": [
+                336,
+                15,
+                387
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x4-a",
+            "position": [
+                349,
+                12,
+                370
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-hondo-bottom-a",
+            "position": [
+                436,
+                6,
+                314
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-nopark",
+            "position": [
+                414,
+                6,
+                296
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-villa-hill-b",
+            "position": [
+                384,
+                12,
+                418
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-nopark",
+            "position": [
+                428,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-liquor-stairs",
+            "position": [
+                313,
+                7,
+                275
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-lawnmowerrepair",
+            "position": [
+                336,
+                6,
+                270
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-carscarscars",
+            "position": [
+                397,
+                6,
+                287
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-gunshop-stairs",
+            "position": [
+                380,
+                7,
+                313
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                348,
+                12,
+                395
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-plaza-tower",
+            "position": [
+                336,
+                12,
+                366
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendonplaza-12x12-b",
+            "position": [
+                327,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-crane-arm-01",
+            "position": [
+                427,
+                11,
+                288
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-factory-bridge",
+            "position": [
+                490,
+                6,
+                334
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-tallsign-kamel5",
+            "position": [
+                306,
+                11,
+                396
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-nile",
+            "position": [
+                406,
+                12,
+                422
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-zilker",
+            "position": [
+                345,
+                12,
+                381
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-alley-monsota",
+            "position": [
+                272,
+                6,
+                416
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendonplaza-4x10",
+            "position": [
+                312,
+                6,
+                433
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-tallsign-pyrrha-n",
+            "position": [
+                290,
+                10,
+                324
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-supermarket",
+            "position": [
+                359,
+                12,
+                377
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-mural-factory",
+            "position": [
+                435,
+                6,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beadstore",
+            "position": [
+                342,
+                12,
+                333
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-keyboardrepair",
+            "position": [
+                289,
+                6,
+                264
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-beam-2x1",
+            "position": [
+                385,
+                7,
+                294
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonramp-10x4",
+            "position": [
+                315,
+                9,
+                374
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                352,
+                12,
+                395
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonramp-10x4",
+            "position": [
+                312,
+                6,
+                414
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-office-turquoise",
+            "position": [
+                309,
+                9,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-office-brown-a",
+            "position": [
+                327,
+                9,
+                414
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-billboard-goldmen",
+            "position": [
+                290,
+                8,
+                276
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-beam-2x1",
+            "position": [
+                355,
+                8,
+                269
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-burger-wall-a",
+            "position": [
+                375,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-4x1",
+            "position": [
+                316,
+                8,
+                266
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonapartment06",
+            "position": [
+                306,
+                9,
+                395
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-blockhouse-hill",
+            "position": [
+                443,
+                6,
+                421
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-billboard-humba",
+            "position": [
+                488,
+                9,
+                309
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonplaza-5x10",
+            "position": [
+                316,
+                9,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-constructionsite",
+            "position": [
+                272,
+                6,
+                404
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendonplaza-8x2",
+            "position": [
+                311,
+                9,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-office-white-a",
+            "position": [
+                311,
+                9,
+                412
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-crane-arm-01",
+            "position": [
+                429,
+                11,
+                312
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-office-echo",
+            "position": [
+                289,
+                6,
+                442
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                273,
+                7,
+                324
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ramp-monsotafiller",
+            "position": [
+                289,
+                6,
+                433
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                499,
+                6,
+                228
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                475,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-stairs-4x2",
+            "position": [
+                370,
+                12,
+                389
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                520,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ramp-pinkflamingo-b",
+            "position": [
+                384,
+                12,
+                400
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pyramid",
+            "position": [
+                289,
+                9,
+                395
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-galehouse",
+            "position": [
+                452,
+                6,
+                421
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                376,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-meats",
+            "position": [
+                289,
+                6,
+                303
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonplaza-radio-a",
+            "position": [
+                275,
+                6,
+                303
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-radio-a",
+            "position": [
+                279,
+                6,
+                303
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-villa-soccerfield",
+            "position": [
+                443,
+                6,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                238,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x4-a",
+            "position": [
+                356,
+                12,
+                374
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-underpass-fish-01",
+            "position": [
+                288,
+                9,
+                365
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                322,
+                6,
+                247
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                314,
+                6,
+                247
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-amphitheater",
+            "position": [
+                443,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-arboretum",
+            "position": [
+                443,
+                11,
+                380
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-oxs-tunnel",
+            "position": [
+                444,
+                6,
+                405
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                284,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                307,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-base01",
+            "position": [
+                275,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-gato",
+            "position": [
+                365,
+                8,
+                309
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-gunshop-stairs-a",
+            "position": [
+                380,
+                10,
+                313
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-pillar-underpass",
+            "position": [
+                490,
+                6,
+                364
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-billboard-monsota",
+            "position": [
+                287,
+                8,
+                433
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-stereostore",
+            "position": [
+                289,
+                6,
+                277
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-watertreatment-c",
+            "position": [
+                514,
+                6,
+                252
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-shoerepair",
+            "position": [
+                351,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-powerplant",
+            "position": [
+                388,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-factory-palabras",
+            "position": [
+                481,
+                6,
+                303
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-billboard-marmot",
+            "position": [
+                326,
+                14,
+                353
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-yarn",
+            "position": [
+                353,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-maritime",
+            "position": [
+                385,
+                6,
+                295
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-tallsign-kamel5",
+            "position": [
+                328,
+                13,
+                378
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-stairs-5x2-a",
+            "position": [
+                345,
+                12,
+                382
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-tallsign-diredhow",
+            "position": [
+                366,
+                11,
+                315
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pillar-underpass",
+            "position": [
+                481,
+                6,
+                364
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-pharmacy",
+            "position": [
+                327,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-arcade",
+            "position": [
+                311,
+                6,
+                312
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-coffeeshop",
+            "position": [
+                320,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pipe-8x1",
+            "position": [
+                489,
+                8,
+                274
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-hondo-ramp-rear",
+            "position": [
+                453,
+                6,
+                312
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonplaza-radio",
+            "position": [
+                273,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pipe-ramp",
+            "position": [
+                472,
+                6,
+                320
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "brendonwarehouse03",
+            "position": [
+                388,
+                6,
+                247
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x4-a",
+            "position": [
+                349,
+                12,
+                374
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonplaza-hotdog-parking",
+            "position": [
+                348,
+                6,
+                290
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-watertreatment-b",
+            "position": [
+                482,
+                8,
+                269
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-underpass03",
+            "position": [
+                451,
+                6,
+                232
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                277,
+                6,
+                265
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-hotdog-stairs",
+            "position": [
+                347,
+                7,
+                295
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                346,
+                6,
+                287
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                343,
+                6,
+                291
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                339,
+                6,
+                296
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                261,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                343,
+                6,
+                293
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                453,
+                6,
+                261
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                457,
+                6,
+                261
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-plaza-kirsten",
+            "position": [
+                298,
+                9,
+                374
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-arcade",
+            "position": [
+                298,
+                7,
+                316
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                367,
+                12,
+                392
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                467,
+                6,
+                362
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                460,
+                6,
+                264
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                453,
+                6,
+                267
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                461,
+                6,
+                277
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-halfpipe",
+            "position": [
+                450,
+                6,
+                365
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                359,
+                12,
+                392
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-underpass02",
+            "position": [
+                497,
+                6,
+                354
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-mops",
+            "position": [
+                301,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-buns",
+            "position": [
+                281,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pillow",
+            "position": [
+                291,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "hotdog-stand1",
+            "position": [
+                337,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                336,
+                6,
+                293
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                350,
+                8,
+                309
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-cheesecake",
+            "position": [
+                355,
+                8,
+                315
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-crane-legs",
+            "position": [
+                425,
+                6,
+                297
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-cubepark-ramp",
+            "position": [
+                389,
+                7,
+                314
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                330,
+                6,
+                245
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                384,
+                6,
+                277
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                357,
+                6,
+                277
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-liquorstore",
+            "position": [
+                308,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-topper-b",
+            "position": [
+                434,
+                10,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                384,
+                6,
+                273
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-nopark",
+            "position": [
+                436,
+                6,
+                296
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendonramp-10x2x2",
+            "position": [
+                285,
+                6,
+                303
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "brendonramp-10x2x2",
+            "position": [
+                264,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendonplaza-12x12-a",
+            "position": [
+                349,
+                12,
+                342
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                314,
+                8,
+                261
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                273,
+                8,
+                296
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                276,
+                8,
+                297
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                276,
+                8,
+                295
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                273,
+                8,
+                292
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                267,
+                8,
+                295
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-papaya",
+            "position": [
+                260,
+                6,
+                303
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-loans",
+            "position": [
+                268,
+                6,
+                303
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                270,
+                8,
+                298
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-nopark2",
+            "position": [
+                422,
+                6,
+                296
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-laundrybuilding",
+            "position": [
+                342,
+                6,
+                277
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                319,
+                6,
+                268
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-bookstore",
+            "position": [
+                311,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                459,
+                6,
+                362
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                455,
+                6,
+                336
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                364,
+                6,
+                270
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-printshop",
+            "position": [
+                320,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-musicstore",
+            "position": [
+                316,
+                12,
+                353
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wigstore",
+            "position": [
+                325,
+                12,
+                346
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-hotdog-bridge",
+            "position": [
+                341,
+                7,
+                296
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ramp-marketparking",
+            "position": [
+                336,
+                9,
+                396
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-09x2",
+            "position": [
+                499,
+                7,
+                438
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                352,
+                8,
+                298
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-hondo-balcony-b",
+            "position": [
+                412,
+                8,
+                312
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-nopark2",
+            "position": [
+                377,
+                6,
+                290
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-basketballcourt",
+            "position": [
+                375,
+                12,
+                414
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-paintshop",
+            "position": [
+                340,
+                7,
+                315
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-bakery",
+            "position": [
+                345,
+                7,
+                315
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-bridge-nog",
+            "position": [
+                336,
+                11,
+                397
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-billboard-ribio",
+            "position": [
+                401,
+                18,
+                351
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                346,
+                8,
+                309
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                344,
+                8,
+                309
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "adp-casino-sign",
+            "position": [
+                497,
+                13,
+                362
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-tunnel-top",
+            "position": [
+                424,
+                7,
+                316
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                277,
+                6,
+                273
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                472,
+                6,
+                296
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-sign-parking2-a",
+            "position": [
+                284,
+                8,
+                304
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-realtor",
+            "position": [
+                336,
+                6,
+                298
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-carwash",
+            "position": [
+                252,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                307,
+                7,
+                318
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                451,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                310,
+                7,
+                321
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                355,
+                8,
+                302
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                348,
+                8,
+                305
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                310,
+                7,
+                323
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                463,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                307,
+                7,
+                322
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-hospital",
+            "position": [
+                298,
+                12,
+                353
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                367,
+                12,
+                379
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                383,
+                7,
+                302
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                383,
+                7,
+                306
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                392,
+                7,
+                312
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                392,
+                7,
+                308
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                387,
+                7,
+                306
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                387,
+                7,
+                302
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-crabhouse",
+            "position": [
+                376,
+                8,
+                302
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "brendonplaza-8x8",
+            "position": [
+                342,
+                12,
+                341
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-tallsign-shelley",
+            "position": [
+                397,
+                12,
+                323
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-signage-goldmen",
+            "position": [
+                267,
+                8,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                393,
+                7,
+                293
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                515,
+                6,
+                251
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-stairs-soy-a",
+            "position": [
+                390,
+                7,
+                296
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-noodles",
+            "position": [
+                251,
+                6,
+                283
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-villa-hill-a",
+            "position": [
+                407,
+                8,
+                421
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-burger-wall-b",
+            "position": [
+                360,
+                12,
+                366
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                387,
+                7,
+                312
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                480,
+                6,
+                362
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-park-north",
+            "position": [
+                387,
+                6,
+                253
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-bridge-parking-01",
+            "position": [
+                275,
+                7,
+                311
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-hondo-ramp-d",
+            "position": [
+                413,
+                8,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-nile-ramp",
+            "position": [
+                406,
+                12,
+                418
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-cubepark-eave-a",
+            "position": [
+                393,
+                7,
+                314
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-eyeballs",
+            "position": [
+                279,
+                6,
+                286
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-house01-tan",
+            "position": [
+                458,
+                6,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-stoop-a",
+            "position": [
+                366,
+                8,
+                305
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-bank-stairs",
+            "position": [
+                341,
+                8,
+                311
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-stoop-a",
+            "position": [
+                375,
+                8,
+                304
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x4-a",
+            "position": [
+                373,
+                12,
+                367
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                359,
+                12,
+                398
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-sportsgoods-stairs",
+            "position": [
+                357,
+                8,
+                293
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-wall-09x2",
+            "position": [
+                439,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                237,
+                6,
+                254
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x4-a",
+            "position": [
+                373,
+                12,
+                373
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                363,
+                12,
+                379
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-ciderfactory",
+            "position": [
+                414,
+                9,
+                325
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-taxidepot",
+            "position": [
+                464,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                440,
+                6,
+                325
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                453,
+                6,
+                328
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                455,
+                6,
+                328
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-van-special03",
+            "position": [
+                455,
+                10,
+                385
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-nopark",
+            "position": [
+                481,
+                6,
+                294
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                454,
+                6,
+                331
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                450,
+                6,
+                331
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                450,
+                6,
+                325
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                454,
+                6,
+                325
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-ramp-dire",
+            "position": [
+                358,
+                6,
+                299
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                447,
+                6,
+                328
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                455,
+                6,
+                340
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                455,
+                6,
+                346
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                455,
+                6,
+                352
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                452,
+                6,
+                355
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-office-cityhall",
+            "position": [
+                336,
+                6,
+                442
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                397,
+                7,
+                295
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-beam-4x1",
+            "position": [
+                299,
+                8,
+                266
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                360,
+                12,
+                401
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-hondo-bottom-b",
+            "position": [
+                438,
+                6,
+                314
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                352,
+                12,
+                401
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-23x2",
+            "position": [
+                515,
+                6,
+                263
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-gymhill",
+            "position": [
+                387,
+                12,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-gunshop",
+            "position": [
+                376,
+                9,
+                305
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-radio",
+            "position": [
+                260,
+                6,
+                286
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                280,
+                8,
+                295
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-underpass03",
+            "position": [
+                427,
+                6,
+                232
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-watertreatment-a",
+            "position": [
+                481,
+                6,
+                260
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-underpass04",
+            "position": [
+                303,
+                9,
+                354
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-8x2",
+            "position": [
+                359,
+                12,
+                367
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-hondo-balcony-a",
+            "position": [
+                413,
+                6,
+                314
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-pipe-7x2",
+            "position": [
+                458,
+                10,
+                338
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-factory-palabras",
+            "position": [
+                481,
+                6,
+                293
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-office-nog",
+            "position": [
+                351,
+                12,
+                404
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-16x2",
+            "position": [
+                499,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-petstore",
+            "position": [
+                349,
+                7,
+                324
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-parking-2x2",
+            "position": [
+                312,
+                6,
+                247
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "brendontower2",
+            "position": [
+                339,
+                12,
+                367
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-16x2",
+            "position": [
+                475,
+                6,
+                232
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                487,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-crafthouse",
+            "position": [
+                490,
+                6,
+                413
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-underpass03-a",
+            "position": [
+                499,
+                6,
+                414
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-hondo-balcony",
+            "position": [
+                429,
+                12,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-hondo-balcony",
+            "position": [
+                434,
+                12,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-hondo-balcony",
+            "position": [
+                424,
+                12,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-hondo-balcony",
+            "position": [
+                419,
+                12,
+                313
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-radio-underparking",
+            "position": [
+                270,
+                6,
+                299
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-underpass03-a",
+            "position": [
+                499,
+                6,
+                426
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-house-hill-a",
+            "position": [
+                498,
+                6,
+                430
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-12x2",
+            "position": [
+                499,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-culdesac",
+            "position": [
+                452,
+                6,
+                395
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "adp-van-special02",
+            "position": [
+                472,
+                10,
+                387
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                472,
+                6,
+                362
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-carwash-stairs",
+            "position": [
+                248,
+                6,
+                246
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-underpass03-b",
+            "position": [
+                466,
+                6,
+                365
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-van-special02",
+            "position": [
+                455,
+                10,
+                382
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "bc-parking-4x2",
+            "position": [
+                476,
+                6,
+                362
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-van-special02",
+            "position": [
+                472,
+                10,
+                384
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "adp-van-special03",
+            "position": [
+                472,
+                10,
+                381
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-bowling",
+            "position": [
+                330,
+                6,
+                251
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pipe-8x3",
+            "position": [
+                297,
+                19,
+                339
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-pipe-7x3",
+            "position": [
+                296,
+                19,
+                374
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-liquor-stairs",
+            "position": [
+                361,
+                7,
+                268
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-09x2",
+            "position": [
+                430,
+                7,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-courthouse-bridge",
+            "position": [
+                312,
+                8,
+                425
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-stair-wigtomall",
+            "position": [
+                325,
+                14,
+                341
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-cubepark-eave-c",
+            "position": [
+                396,
+                9,
+                316
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-beam-3x1",
+            "position": [
+                397,
+                9,
+                295
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-wall-topper-a",
+            "position": [
+                499,
+                10,
+                438
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-topper-b",
+            "position": [
+                498,
+                10,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-topper-b",
+            "position": [
+                482,
+                10,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-topper-b",
+            "position": [
+                466,
+                10,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "bc-wall-topper-b",
+            "position": [
+                450,
+                10,
+                447
+            ],
+            "rotation": 1
+        },
+        {
+            "name": "adp-van-special02",
+            "position": [
+                455,
+                10,
+                379
+            ],
+            "rotation": 0
+        },
+        {
+            "name": "adp-van-special02",
+            "position": [
+                460,
+                10,
+                392
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "adp-van-special03",
+            "position": [
+                465,
+                10,
+                392
+            ],
+            "rotation": 3
+        },
+        {
+            "name": "bc-pyrrha-bridge",
+            "position": [
+                282,
+                28,
+                365
+            ],
+            "rotation": 2
+        },
+        {
+            "name": "bc-sign-lastexit-b",
+            "position": [
+                413,
+                14,
+                364
+            ],
+            "rotation": 0
+        }
+    ],
+    "sectorQuanity": 250,
+    "sectors": []
+}

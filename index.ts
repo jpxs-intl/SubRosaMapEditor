@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 
 const app = express();
 
@@ -13,6 +14,17 @@ app.get("/bundle.js", (req, res) => {
     res.sendFile(path.resolve("./dist/bundle.js"))
 })
 
-app.listen(3000, () => {
-  console.log("Server started on port 3000");
+app.get("/list/:p", (req, res) => {
+    const { p } = req.params;
+   // list files in p
+   res.json(fs.readdirSync(path.resolve(`./assets/data/${p}`)).map((f) => {
+        return {
+            name: f.split(".")[0],
+            file: f
+        }
+   }))
+});
+
+app.listen(3001, () => {
+  console.log("Server started on port 3001");
 });
