@@ -119,9 +119,7 @@ export default class Main {
     DragAndDropHandler.init();
 
     StatusPanel.status = "Ready";
-
     console.log("Editor ready!");
-    console.log(Array.from(BuildingManager.instance.getAllBuildings().entries()));
 
     this.start();
 

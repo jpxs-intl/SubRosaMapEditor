@@ -121,9 +121,73 @@ export default class SBCFileParser {
       sectorX: number;
       sectorY: number;
       sectorZ: number;
+
+      blocks: number[]
+      textures: number[]
+      itemsets: number[]
     }[] = [];
 
-    // @TODO: figure how to parse this bullshit
+    for (let i = 0; i < sectorQuanity; i++) {
+        const areaNumber = dataView.getUint32(offset, true);
+        const sectorX = dataView.getUint32(offset + 4, true);
+        const sectorY = dataView.getUint32(offset + 8, true);
+        const sectorZ = dataView.getUint32(offset + 12, true);
+        offset += 16;
+
+        const blocks: number[] = [];
+
+        for (let i = 0; i < 512; i++) {
+            blocks.push(dataView.getUint32(offset, true));
+            offset += 4;
+        }
+
+        const textures: number[] = [];
+        
+        for (let i = 0; i < 4096; i++) {
+            textures.push(dataView.getUint16(offset, true));
+            offset += 2;
+        }
+        
+        const itemsets: number[] = [];
+
+        for (let i = 0; i < 512; i++) {
+            itemsets.push(dataView.getUint16(offset, true));
+            offset += 4;
+        }
+
+        sectors.push({
+            areaNumber,
+            sectorX,
+            sectorY,
+            sectorZ,
+            blocks,
+            textures,
+            itemsets
+        })
+
+    }
+
+    const waypointCount = dataView.getUint32(offset, true);
+    offset += 4;
+
+    const waypoints: {
+      x: number;
+      y: number;
+      z: number;
+    }[] = []
+
+    for (let i = 0; i < waypointCount; i++) {
+        const x = dataView.getUint32(offset, true);
+        const y = dataView.getUint32(offset + 4, true);
+        const z = dataView.getUint32(offset + 8, true);
+        offset += 12;
+
+        waypoints.push({
+            x,
+            y,
+            z
+        })
+    }
 
     const cityData: CityFile = {
       version,
@@ -137,11 +201,13 @@ export default class SBCFileParser {
       buildings,
       sectorQuanity,
       sectors,
+      waypoints
     };
 
     StatusPanel.status = `Loaded ${fileName}`;
 
     console.log("Loaded", fileName);
+    console.log(JSON.stringify(cityData, null))
 
     await DynamicLoader.getRequiredData(cityData);
 

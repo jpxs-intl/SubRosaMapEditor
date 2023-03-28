@@ -12,7 +12,7 @@ export default class MouseCastHandler {
     private static _debugSphere: THREE.Mesh = new THREE.Mesh(
         new THREE.SphereGeometry(5, 32, 32),
         new THREE.MeshBasicMaterial({ color: 0xff0000 })
-    );
+    )
 
     public static getMousePosition(event: MouseEvent): THREE.Vector2 {
         const rect = MouseCastHandler.canvas.getBoundingClientRect();
@@ -24,7 +24,7 @@ export default class MouseCastHandler {
     public static castMousePosition(event: MouseEvent): THREE.Intersection[] {
         MouseCastHandler.getMousePosition(event);
         MouseCastHandler.raycaster.setFromCamera(MouseCastHandler.mouse, Main.camera);
-        return MouseCastHandler.raycaster.intersectObjects(Main.scene.children);
+        return MouseCastHandler.raycaster.intersectObjects(Main.scene.children.filter((child) => child.name !== 'debug' && child.name !== "environment"));
     }
 
     public static init() {
@@ -34,12 +34,22 @@ export default class MouseCastHandler {
             if (intersections.length > 0) {
                 // create a point where the ray intersects the plane
                 const point = intersections[0].point;
-                point.setY(0);
 
-                if (Main.DEBUG) {
-                    this._debugSphere.position.copy(point);
-                    Main.scene.add(this._debugSphere);
-                }
+                // if (Main.DEBUG) {
+                //     this._debugSphere.position.copy(point);
+                //     const sphereObject = new THREE.Object3D();
+                //     sphereObject.name = 'debug';
+                //     sphereObject.add(this._debugSphere);
+                //     Main.scene.add(sphereObject);
+                // }
+
+                // find the selected object
+                const selectedObject = intersections[0].object;
+                
+                // create a temporary wireframe object to show the selected object
+              
+
+                
 
                 // update the mouse position
                 this.lastMosePosition.copy(this.mouse);

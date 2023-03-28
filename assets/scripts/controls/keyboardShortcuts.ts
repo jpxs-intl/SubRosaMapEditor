@@ -46,9 +46,7 @@ export default class KeyboardShortcuts {
       keys: keyCombo,
       description,
       callback,
-    });
-
-    console.log(`Loaded shortcut: [${keyCombo.join(", ")}]`);
+    }); 
   }
 
   public static removeShortcut(name: string) {

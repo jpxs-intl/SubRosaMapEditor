@@ -94,19 +94,19 @@ export default class DebugTools {
         Main.scene.add(buildingMesh);
 
         // render building name
-        const buildingName = new TextGeometry(buildingData.name, {
-            font: Main.font,
-            size: 1,
-            height: 0.1,
-            curveSegments: 12,
-            bevelEnabled: false,
-        });
+        // const buildingName = new TextGeometry(buildingData.name, {
+        //     font: Main.font,
+        //     size: 1,
+        //     height: 0.1,
+        //     curveSegments: 12,
+        //     bevelEnabled: false,
+        // });
 
-        const buildingNameMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-        const buildingNameMesh = new THREE.Mesh(buildingName, buildingNameMaterial);
+        // const buildingNameMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+        // const buildingNameMesh = new THREE.Mesh(buildingName, buildingNameMaterial);
 
-        buildingNameMesh.position.set(position.x, position.y + height + 2, position.z);
-        Main.scene.add(buildingNameMesh);
+        // buildingNameMesh.position.set(position.x, position.y + height + 2, position.z);
+        // Main.scene.add(buildingNameMesh);
 
 
       })
