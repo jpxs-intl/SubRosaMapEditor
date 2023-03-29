@@ -81,12 +81,6 @@ export default class SBBFileParser {
       for (let l = 0; l < length; l++) {
         for (let w = 0; w < width; w++) {
           const block = dataView.getUint32(offset, true); // 4
-
-          if (fileName == "burger")
-            console.log(
-              `${fileName}: BlockList[${h}][${l}][${w}] starts at ${offset.toString(16)} (${block})`
-            );
-
           const interiorBlock = dataView.getUint32(offset + 4, true); // 8
           const buildBlock = dataView.getUint32(offset + 8, true); // 12
           const edgeX = dataView.getUint32(offset + 12, true); // 16
