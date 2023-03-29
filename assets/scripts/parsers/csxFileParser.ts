@@ -59,7 +59,6 @@ export default class CSXFileParser {
 
     for (let i = 0; i < fileTable.length; i++) {
       const file = fileTable[i];
-
       switch (file.magic) {
         case 0x01: {
           const fileData = buffer.slice(file.offset, file.offset + file.size);

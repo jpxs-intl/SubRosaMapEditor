@@ -7,54 +7,54 @@ export default class SBBFileParser {
 
     console.log(`${fileName}: ${dataView.byteLength.toString(16)}`)
 
-    const version = dataView.getUint32(0, true);
-    const name = ParserUtils.getString(dataView, 4, 64);
+    const version = dataView.getUint32(0, true); // 4
+    const name = ParserUtils.getString(dataView, 4, 64); // 68
 
-    const width = dataView.getUint32(68, true);
-    const length = dataView.getUint32(72, true);
-    const height = dataView.getUint32(76, true);
+    const width = dataView.getUint32(68, true); // 72
+    const length = dataView.getUint32(72, true); // 76
+    const height = dataView.getUint32(76, true); // 80
 
-    const offsetX = dataView.getUint32(80, true);
-    const offsetY = dataView.getUint32(84, true);
-    const offsetZ = dataView.getUint32(88, true);
+    const offsetX = dataView.getUint32(80, true); // 84
+    const offsetY = dataView.getUint32(84, true); // 88
+    const offsetZ = dataView.getUint32(88, true); // 92
 
-    const textureQuanity = dataView.getUint32(92, true);
+    const textureQuanity = dataView.getUint32(92, true); // 96
 
     let offset = 96;
     let textures: string[] = [];
     
     for (let i = 0; i < textureQuanity; i++) {
-      textures.push(ParserUtils.getString(dataView, offset, 64));
+      textures.push(ParserUtils.getString(dataView, offset, 64)) // 64 byte strings;
       offset += 64;
     }
 
-    const specialBlockQuanity = dataView.getUint32(offset, true);
+    const specialBlockQuanity = dataView.getUint32(offset, true); // 4
     offset += 4;
 
     let specialBlocks: string[] = [];
 
     for (let i = 0; i < specialBlockQuanity; i++) {
-      specialBlocks.push(ParserUtils.getString(dataView, offset, 64));
+      specialBlocks.push(ParserUtils.getString(dataView, offset, 64)); // 64 byte strings
       offset += 64;
     }
 
-    const buildBlockQuanity = dataView.getUint32(offset, true);
+    const buildBlockQuanity = dataView.getUint32(offset, true); // 4
     offset += 4;
 
     let buildBlocks: string[] = [];
 
     for (let i = 0; i < buildBlockQuanity; i++) {
-      buildBlocks.push(ParserUtils.getString(dataView, offset, 64));
+      buildBlocks.push(ParserUtils.getString(dataView, offset, 64)); // 64 byte strings
       offset += 64;
     }
 
-    const itemSetQuanity = dataView.getUint32(offset, true);
+    const itemSetQuanity = dataView.getUint32(offset, true); // 4
     offset += 4;
 
     let itemSets: string[] = [];
 
     for (let i = 0; i < itemSetQuanity; i++) {
-      itemSets.push(ParserUtils.getString(dataView, offset, 64));
+      itemSets.push(ParserUtils.getString(dataView, offset, 64)); // 64 byte strings
       offset += 64;
     }
 
@@ -80,18 +80,18 @@ export default class SBBFileParser {
     for (let h = 0; h < height; h++) {
       for (let l = 0; l < length; l++) {
         for (let w = 0; w < width; w++) {
-          const block = dataView.getUint32(offset, true);
+          const block = dataView.getUint32(offset, true); // 4
 
           if (fileName == "burger")
             console.log(
               `${fileName}: BlockList[${h}][${l}][${w}] starts at ${offset.toString(16)} (${block})`
             );
 
-          const interiorBlock = dataView.getUint32(offset + 4, true);
-          const buildBlock = dataView.getUint32(offset + 8, true);
-          const edgeX = dataView.getUint32(offset + 12, true);
-          const edgeZ = dataView.getUint32(offset + 16, true);
-          const floor = dataView.getUint32(offset + 20, true);
+          const interiorBlock = dataView.getUint32(offset + 4, true); // 8
+          const buildBlock = dataView.getUint32(offset + 8, true); // 12
+          const edgeX = dataView.getUint32(offset + 12, true); // 16
+          const edgeZ = dataView.getUint32(offset + 16, true); // 20
+          const floor = dataView.getUint32(offset + 20, true); // 24
 
           offset += 24;
 
