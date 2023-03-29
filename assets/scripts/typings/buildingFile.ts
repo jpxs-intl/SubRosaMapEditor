@@ -17,11 +17,11 @@ export interface BuildingFile {
 export interface Tile {
   block: number;
   interiorBlock: number;
-  buildBlock: string;
+  buildBlock?: string;
   edgeX: number;
   edgeZ: number;
   floor: number;
   textures: [string, string, string, string, string, string, string, string];
   interiorTextures: [string, string, string, string, string, string, string, string];
-  itemSet: string;
+  itemSet?: string;
 }

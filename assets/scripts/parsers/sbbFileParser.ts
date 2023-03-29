@@ -63,7 +63,7 @@ export default class SBBFileParser {
     let tiles: {
       block: number;
       interiorBlock: number;
-      buildBlock: string;
+      buildBlock?: string;
       edgeX: number;
       edgeZ: number;
       floor: number;
@@ -72,10 +72,8 @@ export default class SBBFileParser {
 
       interiorTextures: [string, string, string, string, string, string, string, string];
 
-      itemSet: string;
+      itemSet?: string;
     }[][][] = [];
-
-    let i = 0;
 
     for (let h = 0; h < height; h++) {
       for (let l = 0; l < length; l++) {
@@ -86,8 +84,6 @@ export default class SBBFileParser {
           const edgeX = dataView.getUint32(offset + 12, true); // 16
           const edgeZ = dataView.getUint32(offset + 16, true); // 20
           const floor = dataView.getUint32(offset + 20, true); // 24
-          // TODO: Add undefined check to buildBlock, it can very rarely be undefined in current impl
-          // Should also add one to itemSet just in case
 
           offset += 24;
 
@@ -120,8 +116,6 @@ export default class SBBFileParser {
               interiorTextures: interiorTextures as [string, string, string, string, string, string, string, string],
               itemSet,
             };
-
-          i++;
         }
       }
     }
