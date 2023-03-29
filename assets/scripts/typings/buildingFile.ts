@@ -11,17 +11,17 @@ export interface BuildingFile {
   specialBlocks: string[];
   buildBlocks: string[];
   itemSets: string[];
-  blocks: Block[][][];
+  tiles: Tile[][][];
 }
 
-export interface Block {
+export interface Tile {
   block: number;
   interiorBlock: number;
-  buildBlock: number;
+  buildBlock: string;
   edgeX: number;
   edgeZ: number;
   floor: number;
-  textures: [number, number, number, number, number, number, number, number];
-  interiorTextures: [number, number, number, number, number, number, number, number];
-  itemSet: number;
+  textures: [string, string, string, string, string, string, string, string];
+  interiorTextures: [string, string, string, string, string, string, string, string];
+  itemSet: string;
 }
