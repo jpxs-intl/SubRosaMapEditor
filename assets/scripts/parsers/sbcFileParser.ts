@@ -9,9 +9,10 @@ export default class SBCFileParser {
   public static async load(buffer: ArrayBuffer, fileName: string) {
     const dataView = new DataView(buffer);
 
-    StatusPanel.status = `Loading ${fileName}...`;
-
     const version = dataView.getUint32(0, true); // 4
+
+    StatusPanel.status = `Loading ${fileName}... (version: ${version})`;
+
     const itemSetQuanity = dataView.getUint32(4, true); // 8
 
     let offset = 8;

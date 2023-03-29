@@ -42,6 +42,27 @@ export default class TextureManager {
     });
   }
 
+  public loadTextureFromBuffer(buffer: ArrayBuffer, name: string): Promise<THREE.Texture | undefined> {
+    return new Promise((resolve, reject) => {
+      if (this._textures.has(name)) {
+        resolve(this._textures.get(name));
+      } else {
+        const loader = new THREE.TextureLoader();
+        loader.load(
+          URL.createObjectURL(new Blob([buffer])),
+          (texture) => {
+            this._textures.set(name, texture);
+            resolve(texture);
+          },
+          undefined,
+          (error) => {
+            reject(error);
+          }
+        );
+      }
+    });
+  }
+
   public async loadTextures(): Promise<Array<THREE.Texture | undefined>> {
     
     const textures: {

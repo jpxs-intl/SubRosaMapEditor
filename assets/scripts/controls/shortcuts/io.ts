@@ -1,4 +1,5 @@
 import FileInputHandler from "../../misc/fileInputHandler";
+import CSXFileParser from "../../parsers/csxFileParser";
 import SBCFileParser from "../../parsers/sbcFileParser";
 import KeyboardShortcuts from "../keyboardShortcuts";
 
@@ -26,6 +27,23 @@ export default function ioKeyboardShortcuts() {
           
           file.arrayBuffer().then((buffer) => {
             SBCFileParser.load(buffer, file.name)
+          })
+        }
+      });
+    },
+  });
+
+  KeyboardShortcuts.addShortcut({
+    name: "Load CSX",
+    description: "Load a CSX bundle file",
+    keyCombo: ["^", "+", "o"],
+    callback: () => {
+      // Load
+      FileInputHandler.openFileInputDialog(".csx").then((files) => {
+        if (files) {
+          const file = files[0];
+          file.arrayBuffer().then((buffer) => {
+            CSXFileParser.load(buffer, file.name)
           })
         }
       });

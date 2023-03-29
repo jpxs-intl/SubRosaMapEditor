@@ -1,8 +1,8 @@
 export default class FileInputHandler {
-  public static openFileInputDialog(): Promise<FileList | null> {
+  public static openFileInputDialog(extension?: string): Promise<FileList | null> {
     const fileInputElement = document.createElement("input");
     fileInputElement.type = "file";
-    fileInputElement.accept = ".sbc";
+    fileInputElement.accept = extension || ".sbc";
 
     return new Promise((resolve) => {
       fileInputElement.onchange = () => {

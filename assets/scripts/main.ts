@@ -100,15 +100,8 @@ export default class Main {
 
   public async init() {
     // load editor modules
-    // StatusPanel.status = "Loading textures...";
-    // await TextureManager.instance.loadTextures();
-    // StatusPanel.status = "Loading blocks...";
-    // await BlockManager.instance.loadblocks();
-    // StatusPanel.status = "Loading Build Blocks...";
-    // await BuildBlockManager.instance.loadblocks();
-    // StatusPanel.status = "Loading buildings...";
-    // await BuildingManager.instance.loadBuildings();
-    // StatusPanel.status = "Loading font...";
+    StatusPanel.status = "Loading Portals...";
+    await BuildBlockManager.instance.loadblocks();
     this._font = await this._fontLoader.loadAsync("/assets/fonts/helvetiker_regular.typeface.json");
     StatusPanel.status = "Loading enviroment...";
     Enviroment.instance.init();

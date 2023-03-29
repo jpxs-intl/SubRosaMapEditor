@@ -4,7 +4,7 @@ export default class SBLFileParser {
 
     const version = dataView.getUint32(0, true);
 
-    if (version !== 2) throw new Error(`SBL version ${version} is not supported.`)
+   if (version !== 1) throw new Error(`SBL version ${version} is not supported.`);
 
     const size0 = dataView.getUint32(4, true);
     const size1 = dataView.getUint32(8, true);
