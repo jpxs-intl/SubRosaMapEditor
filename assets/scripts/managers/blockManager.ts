@@ -37,6 +37,7 @@ export default class BlockManager {
               resolve(block);
             } catch (error) {
               console.error(`Failed to load ${type} ${name}`);
+              console.error(error);
               reject(error);
             }
           } else {

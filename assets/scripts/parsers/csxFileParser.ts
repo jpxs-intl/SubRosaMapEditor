@@ -62,7 +62,7 @@ export default class CSXFileParser {
       switch (file.magic) {
         case 0x01: {
           const fileData = buffer.slice(file.offset, file.offset + file.size);
-          SBLFileParser.load(fileData, file.name);
+          SBLFileParser.loadBlock(fileData, file.name);
           break;
         }
         case 0x02: {

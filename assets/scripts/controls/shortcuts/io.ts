@@ -11,17 +11,6 @@ import KeyboardShortcuts from "../keyboardShortcuts";
 
 export default function ioKeyboardShortcuts() {
   KeyboardShortcuts.addShortcut({
-    name: "Save",
-    description: "Save the current project",
-    keyCombo: ["^", "s"],
-    callback: () => {
-      // Save
-
-      console.log("Saving...");
-    },
-  });
-
-  KeyboardShortcuts.addShortcut({
     name: "Load",
     description: "Load a map file",
     keyCombo: ["^", "o"],
@@ -41,6 +30,17 @@ export default function ioKeyboardShortcuts() {
     keyCombo: ["^", "+", "b"],
     callback: OpenAndRenderSBBAction
   })
+
+  KeyboardShortcuts.addShortcut({
+    name: "Save",
+    description: "Save the current project",
+    keyCombo: ["^", "s"],
+    callback: () => {
+      // Save
+
+      console.log("Saving...");
+    },
+  });
 
   KeyboardShortcuts.addShortcut({
     name: "New",
