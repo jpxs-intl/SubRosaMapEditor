@@ -80,10 +80,17 @@ export default class SBBFileParser {
         for (let w = 0; w < width; w++) {
           const block = dataView.getUint32(offset, true); // 4
           const interiorBlock = dataView.getUint32(offset + 4, true); // 8
-          const buildBlock = buildBlocks[dataView.getUint32(offset + 8, true)]; // 12
+          let buildBlock = buildBlocks[dataView.getUint32(offset + 8, true)]; // 12
           const edgeX = dataView.getUint32(offset + 12, true); // 16
           const edgeZ = dataView.getUint32(offset + 16, true); // 20
           const floor = dataView.getUint32(offset + 20, true); // 24
+
+          if(Math.abs(interiorBlock & 0xE0000000) == 0x80000000)
+            buildBlock = specialBlocks[interiorBlock & 0x3FF]
+
+          console.log(buildBlock, interiorBlock.toString(16), block.toString(16))
+
+          // TODO: Handle edge case where block == 0x40000000 and interiorBlock == 0xffff. buildBlock is undefined in this case.
 
           offset += 24;
 
