@@ -2,13 +2,10 @@ import * as THREE from "three";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import Main from "../main";
 import BuildingManager from "../managers/buildingManager";
+import BuildingRenderer from "../renderers/renderBuilding";
 import { CityFile } from "../typings/cityFile";
-import Utils from "./utils";
 
 export default class DebugTools {
-  public static keyCombos: Map<string, () => void>;
-  public static debugBaseCombo = "^d";
-
   public static init() {}
 
   public static renderDebugCityInfo(cityData: CityFile) {
@@ -83,31 +80,8 @@ export default class DebugTools {
         if (!building) throw new Error(`Building ${buildingData.name} not found`);
 
         const position = new THREE.Vector3(buildingData.position[0] + building.offsetX, buildingData.position[1] + building.offsetY, buildingData.position[2] + building.offsetZ);
-        const length = building.length;
-        const width = building.width;
-        const height = building.height;
-
-        const buildingGeometry = new THREE.BoxGeometry(length, height, width);
-        const buildingMaterial = new THREE.MeshBasicMaterial({ color: Utils.getColorFromString(buildingData.name)});
-        const buildingMesh = new THREE.Mesh(buildingGeometry, buildingMaterial);
-        buildingMesh.position.set(position.x, position.y, position.z);
-        Main.scene.add(buildingMesh);
-
-        // render building name
-        // const buildingName = new TextGeometry(buildingData.name, {
-        //     font: Main.font,
-        //     size: 1,
-        //     height: 0.1,
-        //     curveSegments: 12,
-        //     bevelEnabled: false,
-        // });
-
-        // const buildingNameMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-        // const buildingNameMesh = new THREE.Mesh(buildingName, buildingNameMaterial);
-
-        // buildingNameMesh.position.set(position.x, position.y + height + 2, position.z);
-        // Main.scene.add(buildingNameMesh);
-
+       
+        BuildingRenderer.render(building, position)
 
       })
   }
