@@ -1,5 +1,7 @@
+import { Beam, Door, Portal, PortalFile, Window } from "../typings/blockFile";
+
 export default class SBLFileParser {
-  public static load(buffer: ArrayBuffer, fileName: string) {
+  public static loadBlock(buffer: ArrayBuffer, fileName: string) {
     const dataView = new DataView(buffer);
 
     const version = dataView.getUint32(0, true);
@@ -137,4 +139,109 @@ export default class SBLFileParser {
 
     return block;
   }
+
+
+  public static loadPortal(buffer: ArrayBuffer, fileName: string): PortalFile {
+
+    const dataView = new DataView(buffer);
+    const version = dataView.getUint32(0, true);
+
+    let portals: Portal[] = [];
+
+    let offset = 4;
+    for (let i = 0; i < 16; i++) {
+  
+      const type = dataView.getUint32(offset, true);
+      const x = dataView.getUint32(offset + 4, true);
+      const width = dataView.getUint32(offset + 8, true);
+      const y = dataView.getUint32(offset + 12, true);
+      const height = dataView.getUint32(offset + 16, true);
+
+      const doorCount = dataView.getUint32(offset + 20, true);
+      
+      offset += 24;
+
+      let doors:Door[] = [];
+
+      for (let j = 0; j < doorCount; j++) {
+        const doorType = dataView.getUint32(offset, true);
+        const x = dataView.getUint32(offset + 4, true);
+        const y = dataView.getUint32(offset + 8, true);
+
+        offset += 12;
+
+        doors.push({
+          doorType,
+          x,
+          y,
+        });
+      }
+
+      const windowCount = dataView.getUint32(offset, true);
+      offset += 4;
+
+      let windows: Window[] = [];
+
+      for (let j = 0; j < windowCount; j++) {
+        const windowType = dataView.getUint32(offset, true);
+        const x = dataView.getUint32(offset + 4, true);
+        const width = dataView.getUint32(offset + 8, true);
+        const y = dataView.getUint32(offset + 12, true);
+        const height = dataView.getUint32(offset + 16, true);
+
+        offset += 20;
+
+        windows.push({
+          windowType,
+          x,
+          width,
+          y,
+          height,
+        });
+      }
+
+      const beamCount = dataView.getUint32(offset, true);
+      offset += 4;
+
+      let beams: Beam[] = [];
+
+      for (let j = 0; j < beamCount; j++) {
+        const beamType = dataView.getUint32(offset, true);
+        const x = dataView.getUint32(offset + 4, true);
+        const width = dataView.getUint32(offset + 8, true);
+        const y = dataView.getUint32(offset + 12, true);
+        const height = dataView.getUint32(offset + 16, true);
+
+        offset += 20;
+
+        beams.push({
+          beamType,
+          x,
+          width,
+          y,
+          height,
+        });
+      }
+
+      const portal = {
+        type,
+        x,
+        width,
+        y,
+        height,
+        doors,
+        windows,
+        beams,
+      };
+  
+      portals.push(portal);
+    }
+
+    return {
+      version,
+      portals,
+    }
+
+  }
+
 }
