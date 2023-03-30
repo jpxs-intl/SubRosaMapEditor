@@ -1,6 +1,12 @@
+import * as THREE from "three";
 import FileInputHandler from "../../misc/fileInputHandler";
 import CSXFileParser from "../../parsers/csxFileParser";
+import SBBFileParser from "../../parsers/sbbFileParser";
 import SBCFileParser from "../../parsers/sbcFileParser";
+import BuildingRenderer from "../../renderers/renderBuilding";
+import OpenAndRenderSBBAction from "../actions/debug/openAndRenderSBB";
+import OpenCityAction from "../actions/file/openCity";
+import OpenCSXAction from "../actions/file/openCSX";
 import KeyboardShortcuts from "../keyboardShortcuts";
 
 export default function ioKeyboardShortcuts() {
@@ -19,36 +25,22 @@ export default function ioKeyboardShortcuts() {
     name: "Load",
     description: "Load a map file",
     keyCombo: ["^", "o"],
-    callback: () => {
-      // Load
-      FileInputHandler.openFileInputDialog().then((files) => {
-        if (files) {
-          const file = files[0];
-          
-          file.arrayBuffer().then((buffer) => {
-            SBCFileParser.load(buffer, file.name)
-          })
-        }
-      });
-    },
+    callback: OpenCityAction
   });
 
   KeyboardShortcuts.addShortcut({
     name: "Load CSX",
     description: "Load a CSX bundle file",
     keyCombo: ["^", "+", "o"],
-    callback: () => {
-      // Load
-      FileInputHandler.openFileInputDialog(".csx").then((files) => {
-        if (files) {
-          const file = files[0];
-          file.arrayBuffer().then((buffer) => {
-            CSXFileParser.load(buffer, file.name)
-          })
-        }
-      });
-    },
+    callback: OpenCSXAction
   });
+
+  KeyboardShortcuts.addShortcut({
+    name: "Debug: Load building",
+    description: "Load a building file",
+    keyCombo: ["^", "+", "b"],
+    callback: OpenAndRenderSBBAction
+  })
 
   KeyboardShortcuts.addShortcut({
     name: "New",

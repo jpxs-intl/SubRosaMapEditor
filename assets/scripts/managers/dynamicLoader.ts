@@ -4,7 +4,6 @@ import { BlockFile } from "../typings/blockFile";
 import { BuildingFile } from "../typings/buildingFile";
 import { CityFile } from "../typings/cityFile";
 import BlockManager from "./blockManager";
-import BuildBlockManager from "./buildBlockManager";
 import BuildingManager from "./buildingManager";
 import TextureManager from "./textureManager";
 
@@ -24,7 +23,7 @@ export default class DynamicLoader {
 
     return Promise.all(
       blocks.map(async (block) => {
-        await BlockManager.instance.loadblock(block.name, block.file);
+        await BlockManager.instance.loadblock(block.name, block.file, "block");
         blockCount++;
         StatusPanel.status = `Dynamically loading blocks: ${blockCount}/${blockTotal}`;
       })
@@ -59,14 +58,14 @@ export default class DynamicLoader {
 
     return Promise.all(
       blocks.map(async (block) => {
-        await BuildBlockManager.instance.loadblock(block.name, block.file);
+        await BlockManager.instance.loadblock(block.name, block.file, "buildblock");
         blockCount++;
         StatusPanel.status = `Dynamically loading build blocks: ${blockCount}/${blockTotal}`;
       })
     )
       .then(() => {
         StatusPanel.status = "Done loading build blocks";
-        return blockNames.map((name) => BuildBlockManager.instance.getblock(name));
+        return blockNames.map((name) => BlockManager.instance.getblock(name));
       })
       .catch((error) => {
         console.error(error);

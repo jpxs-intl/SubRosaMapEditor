@@ -1,19 +1,14 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { Font, FontLoader } from "three/examples/jsm/loaders/FontLoader";
-import BlockManager from "./managers/blockManager";
-import BuildingManager from "./managers/buildingManager";
-import TextureManager from "./managers/textureManager";
 import Enviroment from "./misc/enviroment";
 import MouseCastHandler from "./controls/mouseCastHandler";
-import SelectionHandler from "./controls/selectionHandler";
 import StatusPanel from "./misc/statusPanel";
-import FileInputHandler from "./misc/dragAndDropHandler";
-import Toolbar from "./controls/toolbar/toolbar";
 import KeyboardShortcuts from "./controls/keyboardShortcuts";
 import DragAndDropHandler from "./misc/dragAndDropHandler";
-import BuildBlockManager from "./managers/buildBlockManager";
+import StatsPanel from "./misc/stats";
+import BlockManager from "./managers/blockManager";
+import { MainPanel } from "./controls/sidebar/mainPanel";
 
 export default class Main {
   private static _instance: Main;
@@ -56,6 +51,7 @@ export default class Main {
     const delta = time - this._lastTime;
     this._lastTime = time;
     this._renderer.render(this._scene, this._camera);
+    StatsPanel.update();
     requestAnimationFrame(this.render.bind(this));
   }
 
@@ -100,16 +96,20 @@ export default class Main {
 
   public async init() {
     // load editor modules
-    StatusPanel.status = "Loading Portals...";
-    await BuildBlockManager.instance.loadblocks();
+    // load build blocks (they aren't in the csx file)
+    StatusPanel.status = "Loading Build Blocks...";
+    await BlockManager.instance.loadblocks("buildblock");
+
     this._font = await this._fontLoader.loadAsync("/assets/fonts/helvetiker_regular.typeface.json");
     StatusPanel.status = "Loading enviroment...";
     Enviroment.instance.init();
     MouseCastHandler.init();
     // SelectionHandler.instance.init();
-    Toolbar.init();
     KeyboardShortcuts.init();
     DragAndDropHandler.init();
+
+    StatsPanel.init();
+    MainPanel.init()
 
     StatusPanel.status = "Ready";
     console.log("Editor ready!");

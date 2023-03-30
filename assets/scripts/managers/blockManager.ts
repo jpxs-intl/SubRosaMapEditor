@@ -1,10 +1,9 @@
-import * as THREE from "three";
 import StatusPanel from "../misc/statusPanel";
 import SBLFileParser from "../parsers/sblFileParser";
 import { BlockFile } from "../typings/blockFile";
 
 export default class BlockManager {
-  private static _instance: BlockManager;
+  private static _instance: BlockManager
 
   private _blocks: Map<string, BlockFile>;
 
@@ -23,12 +22,12 @@ export default class BlockManager {
     return this._blocks.get(name);
   }
 
-  public loadblock(name: string, path: string): Promise<BlockFile | undefined> {
+  public loadblock(name: string, path: string, type: "block" | "buildblock"): Promise<BlockFile | undefined> {
     return new Promise((resolve, reject) => {
       if (this._blocks.has(name)) { 
         resolve(this._blocks.get(name));
       } else {
-        fetch(`/assets/block/${path}`).then(async (response) => {
+        fetch(`/assets/${type}/${path}`).then(async (response) => {
           if (response.ok) {
             const buffer = await response.arrayBuffer();
 
@@ -37,7 +36,7 @@ export default class BlockManager {
               this._blocks.set(name, block);
               resolve(block);
             } catch (error) {
-              console.error(`Failed to load block ${name}`);
+              console.error(`Failed to load ${type} ${name}`);
               reject(error);
             }
           } else {
@@ -48,21 +47,21 @@ export default class BlockManager {
     });
   }
 
-  public async loadblocks(): Promise<Array<BlockFile | undefined>> {
+  public async loadblocks(type: "block" | "buildblock"): Promise<Array<BlockFile | undefined>> {
     const blocks: {
       name: string;
       file: string;
-    }[] = await fetch("/list/block").then((response) => response.json());
+    }[] = await fetch(`/list/${type}`).then((response) => response.json());
 
     let blockCount = 0;
     let blockTotal = blocks.length;
 
     return Promise.all(
       blocks.map(async (block) => {
-        const b = await this.loadblock(block.name, block.file);
+        const b = await this.loadblock(block.name, block.file, type);
         blockCount++;
 
-        StatusPanel.status = `Loading blocks: ${blockCount}/${blockTotal}`;
+        StatusPanel.status = `Loading ${type}s: ${blockCount}/${blockTotal}`;
 
         return b;
       })
