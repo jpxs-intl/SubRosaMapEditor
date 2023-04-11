@@ -35,6 +35,7 @@ export default class BuildingRenderer {
             );
 
             debugCube.position.set(x + position.x, y + position.y, z + position.z);
+            console.log(debugCube.position);
             buildingGroup.add(debugCube);
           } else {
             // console.log("no build block");

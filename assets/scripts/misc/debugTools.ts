@@ -4,6 +4,7 @@ import Main from "../main";
 import BuildingManager from "../managers/buildingManager";
 import BuildingRenderer from "../renderers/renderBuilding";
 import { CityFile } from "../typings/cityFile";
+import Utils from "./utils";
 
 export default class DebugTools {
   public static init() {}
@@ -75,14 +76,18 @@ export default class DebugTools {
 
       cityData.buildings.forEach((buildingData, index) => {
 
-        const building = BuildingManager.instance.getBuilding(buildingData.name);   
+        const building = BuildingManager.instance.getBuilding(buildingData.name)
+        if (!building) throw new Error(`Building ${buildingData.name} not found!`)
 
-        if (!building) throw new Error(`Building ${buildingData.name} not found`);
+        const cube = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({
+          color: Utils.getColorFromString(buildingData.name),
+        });
+        const mesh = new THREE.Mesh(cube, material);
+        mesh.position.set(buildingData.position[0], buildingData.position[1], buildingData.position[2]);
+        mesh.scale.set(building.width, building.height, building.length);
 
-        const position = new THREE.Vector3(buildingData.position[0] + building.offsetX, buildingData.position[1] + building.offsetY, buildingData.position[2] + building.offsetZ);
-       
-        BuildingRenderer.render(building, position)
-
+        Main.scene.add(mesh);
       })
   }
 }

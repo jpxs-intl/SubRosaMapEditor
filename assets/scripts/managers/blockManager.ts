@@ -1,14 +1,17 @@
 import StatusPanel from "../misc/statusPanel";
+import { IfEquals } from "../misc/utilTypes";
 import SBLFileParser from "../parsers/sblFileParser";
-import { BlockFile } from "../typings/blockFile";
+import { BlockFile, PortalFile } from "../typings/blockFile";
 
 export default class BlockManager {
   private static _instance: BlockManager
 
   private _blocks: Map<string, BlockFile>;
+  private _portals: Map<string, PortalFile>;
 
   private constructor() {
     this._blocks = new Map();
+    this._portals = new Map();
   }
 
   public static get instance(): BlockManager {
@@ -22,7 +25,11 @@ export default class BlockManager {
     return this._blocks.get(name);
   }
 
-  public loadblock(name: string, path: string, type: "block" | "buildblock"): Promise<BlockFile | undefined> {
+  public getPortal(name: string): PortalFile | undefined {
+    return this._portals.get(name);
+  }
+
+  public loadblock(name: string, path: string, type: "block" | "buildblock"): Promise<BlockFile | PortalFile | undefined> {
     return new Promise((resolve, reject) => {
       if (this._blocks.has(name)) { 
         resolve(this._blocks.get(name));
@@ -32,8 +39,8 @@ export default class BlockManager {
             const buffer = await response.arrayBuffer();
 
             try {
-              const block = SBLFileParser.load(buffer, name);
-              this._blocks.set(name, block);
+              const block = type === "block" ? SBLFileParser.loadBlock(buffer, name) : SBLFileParser.loadPortal(buffer, name);
+              type === "block" ? this._blocks.set(name, block as BlockFile) : this._portals.set(name, block as PortalFile);
               resolve(block);
             } catch (error) {
               console.error(`Failed to load ${type} ${name}`);
@@ -48,7 +55,7 @@ export default class BlockManager {
     });
   }
 
-  public async loadblocks(type: "block" | "buildblock"): Promise<Array<BlockFile | undefined>> {
+  public async loadblocks<T extends "block" | "buildblock">(type: T): Promise<Array<T extends "block" ? (BlockFile | undefined) : (PortalFile | undefined)>> {
     const blocks: {
       name: string;
       file: string;
@@ -73,6 +80,6 @@ export default class BlockManager {
       .then((blocks) => {
         if (!blocks) return [];
         return blocks.filter((block) => block !== undefined);
-      });
+      }) as Promise<Array<T extends "block" ? (BlockFile | undefined) : (PortalFile | undefined)>>
   }
 }
