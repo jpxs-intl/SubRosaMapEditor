@@ -88,7 +88,7 @@ export default class SBBFileParser {
           if(Math.abs(interiorBlock & 0xE0000000) == 0x80000000)
             buildBlock = specialBlocks[interiorBlock & 0x3FF]
 
-          console.log(buildBlock, interiorBlock.toString(2), block.toString(2))
+          // console.log(buildBlock, interiorBlock.toString(16), block.toString(16))
           // @TODO: #FF0 | Handle edge case where block == 0x40000000 and interiorBlock == 0xffff. buildBlock is undefined in this case.
 
           offset += 24;

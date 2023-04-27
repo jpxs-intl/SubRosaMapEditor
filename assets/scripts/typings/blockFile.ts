@@ -9,7 +9,7 @@ export interface BlockFile {
   wall2: number;
   wall3: number;
   wall4: number;
-  surfaces: any[];
+  surfaces: Surface[];
   boxes: Box[];
 }
 
@@ -17,6 +17,19 @@ export interface Box {
   vertices: number[][];
   textures: number[];
   sideFlag: number;
+}
+
+export interface Surface {
+  orderX: number;
+  orderY: number;
+  tessX: number;
+  tessY: number;
+  texture: number;
+  projectTexture: number;
+  data: {
+    vertex: [number, number, number];
+    texCoord: [number, number];
+  }[][]
 }
 
 export interface PortalFile {

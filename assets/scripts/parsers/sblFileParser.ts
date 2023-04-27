@@ -61,16 +61,18 @@ export default class SBLFileParser {
               texCoord: [0, 0],
             };
 
-          data[j][k].vertex[0] = dataView.getUint32(offset, true);
-          data[j][k].vertex[1] = dataView.getUint32(offset + 4, true);
-          data[j][k].vertex[2] = dataView.getUint32(offset + 8, true);
+          data[j][k].vertex[0] = dataView.getFloat32(offset, true);
+          data[j][k].vertex[1] = dataView.getFloat32(offset + 4, true);
+          data[j][k].vertex[2] = dataView.getFloat32(offset + 8, true);
 
-          data[j][k].texCoord[0] = dataView.getUint32(offset + 12, true);
-          data[j][k].texCoord[1] = dataView.getUint32(offset + 16, true);
+          data[j][k].texCoord[0] = dataView.getFloat32(offset + 12, true);
+          data[j][k].texCoord[1] = dataView.getFloat32(offset + 16, true);
 
           offset += 20;
         }
       }
+
+     // console.log(data, fileName)
 
       const surface = {
         orderX,
@@ -98,16 +100,22 @@ export default class SBLFileParser {
       let vertices: [number, number, number][] = [];
       let textures: number[] = [];
 
-      for (let j = 0; j < 4; j++) {
+      for (let j = 0; j < 8; j++) {
         vertices.push([
-          dataView.getUint32(offset, true),
-          dataView.getUint32(offset + 4, true),
-          dataView.getUint32(offset + 8, true),
+          dataView.getFloat32(offset, true),
+          dataView.getFloat32(offset + 4, true),
+          dataView.getFloat32(offset + 8, true),
         ]);
 
-        textures.push(dataView.getUint32(offset + 12, true));
+        console.log(          dataView.getFloat32(offset, true),
+        dataView.getFloat32(offset + 4, true),
+        dataView.getFloat32(offset + 8, true),offset, fileName)
+        offset += 12;
+      }
 
-        offset += 16;
+      for (let j = 0; j < 6; j++) {
+        textures.push(dataView.getUint32(offset, true));
+        offset += 4
       }
 
       const sideFlag = dataView.getUint32(offset, true);
@@ -137,6 +145,7 @@ export default class SBLFileParser {
       boxes,
     };
 
+    //console.log(surfaceQuanity, boxQuanity)
     return block;
   }
 
