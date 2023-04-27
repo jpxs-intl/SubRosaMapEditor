@@ -44,6 +44,10 @@ export default class BuildingManager {
     });
   }
 
+  public addBuilding(building: BuildingFile, buildingName: string): void {
+    this._buildings.set(buildingName, building);
+  }
+
   public async loadBuildings(): Promise<Array<BuildingFile | undefined>> {
     const buildings: {
       name: string;

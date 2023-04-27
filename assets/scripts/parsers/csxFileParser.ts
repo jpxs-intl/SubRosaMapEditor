@@ -1,3 +1,5 @@
+import BlockManager from "../managers/blockManager";
+import BuildingManager from "../managers/buildingManager";
 import TextureManager from "../managers/textureManager";
 import StatusPanel from "../misc/statusPanel";
 import ParserUtils from "./parserUtils";
@@ -62,13 +64,15 @@ export default class CSXFileParser {
       switch (file.magic) {
         case 0x01: {
           const fileData = buffer.slice(file.offset, file.offset + file.size);
-          SBLFileParser.loadBlock(fileData, file.name);
+          const block = SBLFileParser.loadBlock(fileData, file.name);
+          BlockManager.instance.addBlock(block, file.name);
           break;
         }
         case 0x02: {
           const fileData = buffer.slice(file.offset, file.offset + file.size);
           console.log(file.name, file.offset.toString(16), file.size.toString(16));
-          SBBFileParser.load(fileData, file.name);  
+          const building = SBBFileParser.load(fileData, file.name);
+          BuildingManager.instance.addBuilding(building, file.name);
           break;
         }
         case 0x04: {

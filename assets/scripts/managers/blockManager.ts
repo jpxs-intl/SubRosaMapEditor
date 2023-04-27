@@ -55,6 +55,10 @@ export default class BlockManager {
     });
   }
 
+  public addBlock(block: BlockFile, blockName: string): void {
+    this._blocks.set(blockName, block);
+  }
+
   public async loadblocks<T extends "block" | "buildblock">(type: T): Promise<Array<T extends "block" ? (BlockFile | undefined) : (PortalFile | undefined)>> {
     const blocks: {
       name: string;
