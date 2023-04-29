@@ -93,6 +93,7 @@ export default class SBBFileParser {
 
           // console.log(dataView.getUint32(offset + 8, true), interiorBlock.toString(16), block.toString(16))
           // @TODO: #FF0 | Handle edge case where block == 0x40000000 and interiorBlock == 0xffff. buildBlock is undefined in this case.
+          // Above todo seems to have been fixed by new parser changes, keeping for now until testing is done.
 
 
           offset += 24;
