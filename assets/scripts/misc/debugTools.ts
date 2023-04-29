@@ -6,6 +6,7 @@ import BuildingRenderer from "../renderers/renderBuilding";
 import { CityFile } from "../typings/cityFile";
 import Utils from "./utils";
 import BlockManager from "../managers/blockManager";
+import { BlockFile } from "../typings/blockFile";
 
 export default class DebugTools {
   public static init() {}
@@ -100,16 +101,29 @@ export default class DebugTools {
             const tile = building.tiles[w][l][h];
             if (!tile) continue;
 
-            if (tile.buildBlock) {
-              const block = BlockManager.instance.getblock(tile.buildBlock);
-              if (!block) {
+            if (tile.buildBlock || tile.interiorBlock || tile.block) {
+              let block: BlockFile | undefined = undefined
+              let interiorBlock: BlockFile | undefined = undefined;
+              let buildBlock: BlockFile | undefined = undefined;
+
+              if(typeof tile.block != "number" && tile.block)
+                block = BlockManager.instance.getblock(tile.block);
+              if(typeof tile.interiorBlock != "number" && tile.interiorBlock)
+                interiorBlock = BlockManager.instance.getblock(tile.interiorBlock);
+              if(tile.buildBlock)
+                buildBlock = BlockManager.instance.getblock(tile.buildBlock);
+
+              if (!block && !buildBlock && !interiorBlock) {
                 //throw new Error(`Block ${tile.buildBlock} not found!`)
                 // console.log("funny not there", tile.buildBlock);
                 continue;
               }
 
-              //console.log(tile.buildBlock, block.surfaces.length)
+              console.log(tile.block, tile.buildBlock, tile.interiorBlock, block, buildBlock, interiorBlock)
+              // console.log(block.floor, block.ceiling, block.wall1, block.wall2, block.wall3, block.wall4, tile.buildBlock, block.size0, block.size1, block.size2)
 
+              //console.log(tile.buildBlock, block.surfaces.length)
+              /*
              for (const surface of block.surfaces) {
                 for (let surfL = 0; surfL < 4; surfL++) {
                   for (let surfW = 0; surfW < 4; surfW++) {                    
@@ -183,8 +197,8 @@ export default class DebugTools {
                 const buildNameMesh = new THREE.Mesh(buildName, buildNameMaterial);
           
                 buildNameMesh.position.copy(maxVec.add(adjustVec).add(new THREE.Vector3(0, 5, 0)))
-                Main.scene.add(buildNameMesh);*/
-              }
+                Main.scene.add(buildNameMesh);
+              }*/
             }
           }
         }
