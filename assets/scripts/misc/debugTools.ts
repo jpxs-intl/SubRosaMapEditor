@@ -39,46 +39,29 @@ export default class DebugTools {
         }
       }
     }*/
+
+    const boxMesh = new THREE.Object3D();
+
     for (const box of block.boxes) {
       let highestVertex = [-Infinity, -Infinity, -Infinity];
       let lowestVertex = [Infinity, Infinity, Infinity];
       for (const vertex of box.vertices) {
-        if (
-          vertex[0] > highestVertex[0] ||
-          vertex[1] > highestVertex[1] ||
-          vertex[2] > highestVertex[2]
-        ) {
+        if (vertex[0] > highestVertex[0] || vertex[1] > highestVertex[1] || vertex[2] > highestVertex[2]) {
           highestVertex = [...vertex];
         }
-        if (
-          vertex[0] < lowestVertex[0] ||
-          vertex[1] < lowestVertex[1] ||
-          vertex[2] < lowestVertex[2]
-        ) {
+        if (vertex[0] < lowestVertex[0] || vertex[1] < lowestVertex[1] || vertex[2] < lowestVertex[2]) {
           lowestVertex = [...vertex];
         }
       }
 
-      let minVec = new THREE.Vector3(
-        lowestVertex[0],
-        lowestVertex[1],
-        lowestVertex[2]
-      );
-      let maxVec = new THREE.Vector3(
-        highestVertex[0],
-        highestVertex[1],
-        highestVertex[2]
-      );
+      let minVec = new THREE.Vector3(lowestVertex[0], lowestVertex[1], lowestVertex[2]);
+      let maxVec = new THREE.Vector3(highestVertex[0], highestVertex[1], highestVertex[2]);
       let dimensions = new THREE.Vector3().subVectors(maxVec, minVec);
 
       //if(tile.buildBlock.search("stairwell") != -1)
       //console.log(maxVec, minVec, tile.buildBlock)
 
-      const boxGeo = new THREE.BoxGeometry(
-        dimensions.x,
-        dimensions.y,
-        dimensions.z
-      );
+      const boxGeo = new THREE.BoxGeometry(dimensions.x, dimensions.y, dimensions.z);
       const matrix = new THREE.Matrix4().setPosition(
         dimensions.addVectors(minVec, maxVec).multiplyScalar(0.5).add(adjustVec)
       );
@@ -89,7 +72,7 @@ export default class DebugTools {
       });
       const mesh = new THREE.Mesh(boxGeo, material);
 
-      Main.scene.add(mesh);
+      boxMesh.add(mesh);
 
       /*const buildName = new TextGeometry(tile.buildBlock, {
         font: Main.font,
@@ -108,6 +91,8 @@ export default class DebugTools {
       Main.scene.add(buildNameMesh);
     }*/
     }
+
+    Main.scene.add(boxMesh);
   }
 
   public static renderDebugCityInfo(cityData: CityFile) {
@@ -117,15 +102,8 @@ export default class DebugTools {
       const intersectionMarkerMaterial = new THREE.MeshBasicMaterial({
         color: 0xff0000,
       });
-      const intersectionMarkerMesh = new THREE.Mesh(
-        intersectionMarker,
-        intersectionMarkerMaterial
-      );
-      intersectionMarkerMesh.position.set(
-        intersection.x,
-        intersection.y,
-        intersection.z
-      );
+      const intersectionMarkerMesh = new THREE.Mesh(intersectionMarker, intersectionMarkerMaterial);
+      intersectionMarkerMesh.position.set(intersection.x, intersection.y, intersection.z);
       Main.scene.add(intersectionMarkerMesh);
     });
 
@@ -139,10 +117,8 @@ export default class DebugTools {
           `Street ${index} has invalid intersection numbers | ${street.intersectionNumber[0]} ${street.intersectionNumber[1]}`
         );
 
-      const intersectionA =
-        cityData.intersections[street.intersectionNumber[0]];
-      const intersectionB =
-        cityData.intersections[street.intersectionNumber[1]];
+      const intersectionA = cityData.intersections[street.intersectionNumber[0]];
+      const intersectionB = cityData.intersections[street.intersectionNumber[1]];
 
       // draw street
       const streetGeometry = new THREE.BoxGeometry();
@@ -157,8 +133,7 @@ export default class DebugTools {
         0.5,
         0.5,
         Math.sqrt(
-          Math.pow(intersectionA.x - intersectionB.x, 2) +
-            Math.pow(intersectionA.z - intersectionB.z, 2)
+          Math.pow(intersectionA.x - intersectionB.x, 2) + Math.pow(intersectionA.z - intersectionB.z, 2)
         )
       );
       streetMesh.lookAt(intersectionB.x, intersectionB.y, intersectionB.z);
@@ -191,8 +166,7 @@ export default class DebugTools {
 
     for (let buildingData of cityData.buildings) {
       const building = BuildingManager.instance.getBuilding(buildingData.name);
-      if (!building)
-        throw new Error(`Building ${buildingData.name} not found!`);
+      if (!building) throw new Error(`Building ${buildingData.name} not found!`);
 
       for (let h = 0; h < building.height; h++) {
         for (let l = 0; l < building.length; l++) {
@@ -215,15 +189,11 @@ export default class DebugTools {
                 block = BlockManager.instance.getblock(tile.block);
               if (typeof tile.interiorBlock != "number" && tile.interiorBlock)
                 interiorBlock = BlockManager.instance.getblock(tile.interiorBlock);
-              if (tile.buildBlock)
-                buildBlock = BlockManager.instance.getblock(tile.buildBlock);
+              if (tile.buildBlock) buildBlock = BlockManager.instance.getblock(tile.buildBlock);
 
-              if(block)
-                this.renderBlock(block, adjustVec, tile.block as string)
-              if(interiorBlock)
-                this.renderBlock(interiorBlock, adjustVec, tile.interiorBlock as string)
-              if(buildBlock)
-                this.renderBlock(buildBlock, adjustVec, tile.buildBlock as string)
+              if (block) this.renderBlock(block, adjustVec, tile.block as string);
+              if (interiorBlock) this.renderBlock(interiorBlock, adjustVec, tile.interiorBlock as string);
+              if (buildBlock) this.renderBlock(buildBlock, adjustVec, tile.buildBlock as string);
 
               /*if (!block && !buildBlock && !interiorBlock) {
                 //throw new Error(`Block ${tile.buildBlock} not found!`)
