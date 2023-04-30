@@ -107,9 +107,6 @@ export default class SBLFileParser {
           dataView.getFloat32(offset + 8, true),
         ]);
 
-        console.log(          dataView.getFloat32(offset, true),
-        dataView.getFloat32(offset + 4, true),
-        dataView.getFloat32(offset + 8, true),offset, fileName)
         offset += 12;
       }
 
