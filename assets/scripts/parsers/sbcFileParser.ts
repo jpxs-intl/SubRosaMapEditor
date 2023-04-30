@@ -210,7 +210,7 @@ export default class SBCFileParser {
     console.log("Loaded", fileName);
     console.log(JSON.stringify(cityData, null))
 
-    // await DynamicLoader.getRequiredData(cityData);
+   await DynamicLoader.getRequiredData(cityData);
 
     DebugTools.renderDebugCityInfo(cityData);
 

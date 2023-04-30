@@ -8,6 +8,12 @@ export default class Enviroment {
   public groundPlane!: THREE.Mesh;
   public grid = new THREE.GridHelper(1000, 100, 0xff0000, 0x00ff00);
 
+  public options = {
+    showGrid: true,
+    showGroundPlane: true,
+    showFog: true,
+  };
+
   public static get instance() {
     if (!this._instance) {
       this._instance = new Enviroment();
@@ -28,7 +34,7 @@ export default class Enviroment {
     );
 
     this.groundPlane.rotation.x = -Math.PI / 2;
-    this.groundPlane.position.y = -0.5;
+    this.groundPlane.position.y = -1;
     this._parent.add(this.groundPlane);
 
     this._parent.add(this.grid);
@@ -38,5 +44,12 @@ export default class Enviroment {
     this._parent.add(light);
 
     Main.scene.add(this._parent);
+  }
+
+  public update() {
+    this.grid.visible = this.options.showGrid;
+    this.groundPlane.visible = this.options.showGroundPlane;
+    
+    Main.scene.fog = this.options.showFog ? new THREE.Fog(0x222222, 100, 700) : null;
   }
 }
