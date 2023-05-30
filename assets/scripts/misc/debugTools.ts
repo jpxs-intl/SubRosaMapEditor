@@ -7,6 +7,8 @@ import { CityFile } from "../typings/cityFile";
 import Utils from "./utils";
 import BlockManager from "../managers/blockManager";
 import { BlockFile } from "../typings/blockFile";
+//import "../jsmodeler.js";
+//import "../jsmodeler.ext.three.js";
 
 export default class DebugTools {
   public static init() {}
