@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { MeshBasicMaterial } from 'three';
 import Main from '../main';
+import StatusPanel from '../misc/statusPanel';
 
 export default class MouseCastHandler {
 
@@ -24,32 +25,45 @@ export default class MouseCastHandler {
     public static castMousePosition(event: MouseEvent): THREE.Intersection[] {
         MouseCastHandler.getMousePosition(event);
         MouseCastHandler.raycaster.setFromCamera(MouseCastHandler.mouse, Main.camera);
-        return MouseCastHandler.raycaster.intersectObjects(Main.scene.children.filter((child) => child.name !== 'debug' && child.name !== "environment"));
+        return MouseCastHandler.raycaster.intersectObjects(Main.scene.children.filter((child) => {
+            return !child.name.includes("enviroment")
+        }));
     }
 
     public static init() {
 
+        let lastSelectedObject: THREE.Mesh;
+        let debugObject: THREE.Mesh;
+
         MouseCastHandler.canvas.addEventListener('mousemove', (event) => {
             const intersections = MouseCastHandler.castMousePosition(event);
             if (intersections.length > 0) {
-                // create a point where the ray intersects the plane
-                const point = intersections[0].point;
-
-                // if (Main.DEBUG) {
-                //     this._debugSphere.position.copy(point);
-                //     const sphereObject = new THREE.Object3D();
-                //     sphereObject.name = 'debug';
-                //     sphereObject.add(this._debugSphere);
-                //     Main.scene.add(sphereObject);
-                // }
 
                 // find the selected object
-                const selectedObject = intersections[0].object;
+                const selectedObject = intersections[0].object as THREE.Mesh;
                 
-                // create a temporary wireframe object to show the selected object
-              
+                // if the selected object is the same as the last selected object, return
+                if (lastSelectedObject && lastSelectedObject.uuid === selectedObject.uuid) return;
 
-                
+               if (lastSelectedObject) {
+                     // show the last selected object
+                    lastSelectedObject.visible = true;
+                    Main.scene.remove(debugObject);
+                }
+
+                lastSelectedObject = selectedObject;
+
+                // hide the last selected object
+                selectedObject.visible = false;
+
+                debugObject = selectedObject.clone();
+                debugObject.name = `debug_${selectedObject.name}`;
+                debugObject.visible = true;
+                debugObject.material = new MeshBasicMaterial({ color: 0xff0000, wireframe: true });
+
+                Main.scene.add(debugObject);
+
+                StatusPanel.status = `${selectedObject.name} | ${selectedObject.uuid} | ${selectedObject.position.x}, ${selectedObject.position.y}, ${selectedObject.position.z}`
 
                 // update the mouse position
                 this.lastMosePosition.copy(this.mouse);
