@@ -1,19 +1,20 @@
 {
   "name": "subrosamapeditor",
-  "productName": "subrosamapeditor",
+  "productName": "Sub Rosa Map Editor",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Edit Sub Rosa maps.",
   "main": "dist/main.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
+    "build:prod": "npx tsc && npx webpack --config webpack.prod.js",
+    "build:dev": "npx tsc && npx webpack --config webpack.dev.js",
+    "package": "npm run build:prod && electron-forge package",
+    "make": "npm run build:prod && electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint src --color",
-    "watch": "concurrently \"npx webpack -w\" \"npx tsc -w\""
+    "watch": "concurrently \"npx webpack -w --config webpack.dev.js\" \"npx tsc -w\""
   },
   "keywords": [],
-  "author": "gooch",
+  "author": "gart",
   "license": "MIT",
   "config": {
     "forge": {
@@ -21,12 +22,8 @@
         "win32": [
           "squirrel"
         ],
-        "darwin": [
-          "zip"
-        ],
         "linux": [
-          "deb",
-          "rpm"
+          "deb"
         ]
       },
       "electronPackagerConfig": {
@@ -64,6 +61,7 @@
     "electron": "^25.0.1",
     "electron-forge": "^5.2.4",
     "electron-prebuilt-compile": "8.2.0",
+    "html-webpack-plugin": "^5.5.1",
     "three": "^0.150.1",
     "ts-loader": "^9.4.3",
     "webpack": "^5.85.0",
