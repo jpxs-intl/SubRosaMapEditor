@@ -34,12 +34,15 @@ export default class BlockManager {
       if (this._blocks.has(name)) { 
         resolve(this._blocks.get(name));
       } else {
-        fetch(`/assets/${type}/${path}`).then(async (response) => {
-          if (response.ok) {
-            const buffer = await response.arrayBuffer();
+        // @ts-ignore
+        const response = storage.getData(type, path) as {
+          error: string,
+          message: string
+        } | Buffer
+          if (response instanceof Buffer) {
 
             try {
-              const block = type === "block" ? SBLFileParser.loadBlock(buffer, name) : SBLFileParser.loadPortal(buffer, name);
+              const block = type === "block" ? SBLFileParser.loadBlock(response, name) : SBLFileParser.loadPortal(response, name);
               type === "block" ? this._blocks.set(name, block as BlockFile) : this._portals.set(name, block as PortalFile);
               resolve(block);
             } catch (error) {
@@ -48,9 +51,8 @@ export default class BlockManager {
               reject(error);
             }
           } else {
-            reject(response.statusText);
+            reject(response.error);
           }
-        });
       }
     });
   }
@@ -63,7 +65,8 @@ export default class BlockManager {
     const blocks: {
       name: string;
       file: string;
-    }[] = await fetch(`/list/${type}`).then((response) => response.json());
+      // @ts-ignore
+    }[] = storage.list(type) 
 
     let blockCount = 0;
     let blockTotal = blocks.length;
