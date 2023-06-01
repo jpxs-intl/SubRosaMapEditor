@@ -1,11 +1,13 @@
 import Main from "../../../main";
 import DebugTools from "../../../misc/debugTools";
+import Enviroment from "../../../misc/enviroment";
 import StatusPanel from "../../../misc/statusPanel";
 import { MainPanel } from "../mainPanel";
 
 export default function DebugOptions() {
 
     const debugFolder = MainPanel.addFolder("Debug");
+    
 
     const debug = {}
 
@@ -13,4 +15,7 @@ export default function DebugOptions() {
         Main.DEBUG = value;
         StatusPanel.tempStatus = "Debug Tools: " + value;
     })
+
+  
+    
 }

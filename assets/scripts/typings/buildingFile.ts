@@ -15,8 +15,8 @@ export interface BuildingFile {
 }
 
 export interface Tile {
-  block: number;
-  interiorBlock: number;
+  block?: string | number;
+  interiorBlock?: string | number;
   buildBlock?: string;
   edgeX: number;
   edgeZ: number;

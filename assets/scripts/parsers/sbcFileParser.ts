@@ -168,7 +168,9 @@ export default class SBCFileParser {
 
     }
 
-    const waypointCount = dataView.getUint32(offset, true);
+    //const waypointCount = dataView.getUint32(offset, true);
+    const waypointCount = 0
+
     offset += 4;
 
     const waypoints: {
@@ -176,6 +178,7 @@ export default class SBCFileParser {
       y: number;
       z: number;
     }[] = []
+
 
     for (let i = 0; i < waypointCount; i++) {
         const x = dataView.getUint32(offset, true);
@@ -210,10 +213,10 @@ export default class SBCFileParser {
     console.log("Loaded", fileName);
     console.log(JSON.stringify(cityData, null))
 
-    // await DynamicLoader.getRequiredData(cityData);
+   // await DynamicLoader.getRequiredData(cityData);
 
     DebugTools.renderDebugCityInfo(cityData);
 
-    MapRecenter.recenterMap()
+    // MapRecenter.recenterMap()
   }
 }

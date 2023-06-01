@@ -6,17 +6,35 @@ export default function ViewOptions() {
 
     const viewFolder = MainPanel.addFolder("View");
 
-    const view = {
-            "Toggle Grid Helper": () => {
-                Enviroment.instance.grid.visible = !Enviroment.instance.grid.visible;
-                StatusPanel.tempStatus = "Grid Helper: " + Enviroment.instance.grid.visible;   
-            },
-            "Toggle Ground Plane": () => {
-                Enviroment.instance.groundPlane.visible = !Enviroment.instance.groundPlane.visible;
-                StatusPanel.tempStatus = "Ground Plane: " + Enviroment.instance.groundPlane.visible;
-            }
-        }
+    const envFolder = viewFolder.addFolder("Enviroment");
 
-    viewFolder.add(view, "Toggle Grid Helper");
-    viewFolder.add(view, "Toggle Ground Plane");
+    MainPanel.addBoolean(envFolder, "Show Grid", Enviroment.instance.options.showGrid).onChange((value) => {
+        Enviroment.instance.options.showGrid = value;
+        StatusPanel.tempStatus = "Grid: " + value;
+
+        Enviroment.instance.update();
+    })
+
+    MainPanel.addBoolean(envFolder, "Show Ground Plane", Enviroment.instance.options.showGroundPlane).onChange((value) => {
+        Enviroment.instance.options.showGroundPlane = value;
+        StatusPanel.tempStatus = "Ground Plane: " + value;
+
+        Enviroment.instance.update();
+    })
+
+    MainPanel.addBoolean(envFolder, "Show Fog", Enviroment.instance.options.showFog).onChange((value) => {
+        Enviroment.instance.options.showFog = value;
+        StatusPanel.tempStatus = "Fog: " + value;
+
+        Enviroment.instance.update();
+    })
+
+    const uiFolder = viewFolder.addFolder("UI");
+
+    MainPanel.addBoolean(uiFolder, "Show Status Panel", StatusPanel.panel.style.display != "none").onChange((value) => {
+        StatusPanel.panel.style.display = value ? "block" : "none";
+        StatusPanel.tempStatus = "Status Panel: " + value;
+    }
+
+    )
 }
