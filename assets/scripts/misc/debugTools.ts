@@ -225,6 +225,13 @@ export default class DebugTools {
 
     // render sectors
 
+    const sectorGeom = new THREE.BoxGeometry(1, 1, 1);
+    const sectorMat = new THREE.MeshBasicMaterial({
+      color: 0x00ff00,
+      wireframe: false,
+    });
+    let meshCount = 0
+    let meshTransforms = []
     for (let sector of cityData.sectors) {
       let sectorSize = 8;
       let blockIndex = 0;
@@ -234,21 +241,15 @@ export default class DebugTools {
           for (let w = 0; w < sectorSize; w++) {
 
             if (sector.blocks[blockIndex] != 0) {
-              
-              const box = new THREE.BoxGeometry();
-              const material = new THREE.MeshBasicMaterial({
-                color: 0x00ff00,
-                wireframe: false,
-              });
-
-              const blockMesh = new THREE.Mesh(box, material);
+            /*  const blockMesh = new THREE.Mesh(sectorGeom, sectorMat);
 
               blockMesh.position.set(sector.sectorX * sectorSize + w, sector.sectorY * sectorSize + h, sector.sectorZ * sectorSize + l);
               blockMesh.scale.set(1, 1, 1);
 
               blockMesh.name = `sector_${sector.sectorX}_${sector.sectorY}_${sector.sectorZ}_block_${w}_${h}_${l}`;
-              Main.scene.add(blockMesh);
-             
+              Main.scene.add(blockMesh);*/
+              meshCount = meshCount + 1
+              meshTransforms.push(new THREE.Vector3(sector.sectorX * sectorSize + w, sector.sectorY * sectorSize + h, sector.sectorZ * sectorSize + l))
             }
 
             
@@ -256,7 +257,16 @@ export default class DebugTools {
           }
         }
       }
-
     }
+    const sectorsMesh = new THREE.InstancedMesh(sectorGeom, sectorMat, meshCount);
+    const sectorDummy = new THREE.Object3D()
+    for (let i = 0; i < meshTransforms.length; i++) {
+      let transform = meshTransforms[i]
+      sectorDummy.position.set(transform.x, transform.y, transform.z)
+      sectorDummy.updateMatrix()
+      sectorsMesh.setMatrixAt(i, sectorDummy.matrix)
+    }
+    sectorsMesh.name = "City Sectors"
+    Main.scene.add(sectorsMesh)
   }
 }
