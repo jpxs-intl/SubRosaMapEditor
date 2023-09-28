@@ -6,6 +6,7 @@ import { CityFile } from "../typings/cityFile";
 import BlockManager from "./blockManager";
 import BuildingManager from "./buildingManager";
 import TextureManager from "./textureManager";
+import CSXFileParser from "../parsers/csxFileParser";
 
 export default class DynamicLoader {
   public static async loadBlocks(blockNames: string[]): Promise<Array<BlockFile | undefined>> {
@@ -153,6 +154,12 @@ export default class DynamicLoader {
 
     await this.loadTextures(texturesToGet);
 
+    return;
+  }
+
+  public static async loadCSX(type: "world" | "round") {
+    const csx = storage.getData("csx", `${type}.csx`) as Buffer;
+    CSXFileParser.load(csx, `${type}.csx`);
     return;
   }
 }

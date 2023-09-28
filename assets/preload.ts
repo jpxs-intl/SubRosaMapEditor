@@ -3,8 +3,8 @@ import fs from "fs";
 import path from "path";
 
 contextBridge.exposeInMainWorld("storage", {
-  getData: (type: "block" | "buildblock" | "building" | "font" | "texture" | "bundle", name: string) => {
-    const allowedTypes = ["block", "buildblock", "building", "font", "texture", "bundle"];
+  getData: (type: "block" | "buildblock" | "building" | "font" | "texture" | "bundle" | "csx", name: string) => {
+    const allowedTypes = ["block", "buildblock", "building", "font", "texture", "bundle", "csx"];
     if (!allowedTypes.includes(type)) {
       return {
         error: "ACTION_NOT_ALLOWED",

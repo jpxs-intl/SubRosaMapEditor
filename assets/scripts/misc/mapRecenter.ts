@@ -5,6 +5,8 @@ import StatusPanel from "./statusPanel";
 export default class MapRecenter {
   public static recenterMap(): void {
 
+    return;
+
     console.log("Recentering map...");
     StatusPanel.status = "Auto-centering map..."
 

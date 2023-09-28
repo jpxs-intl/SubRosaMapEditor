@@ -36,11 +36,13 @@ export default class MouseCastHandler {
         let debugObject: THREE.Mesh;
 
         MouseCastHandler.canvas.addEventListener('mousemove', (event) => {
-            const intersections = MouseCastHandler.castMousePosition(event);
+            const intersections = MouseCastHandler.castMousePosition(event)
             if (intersections.length > 0) {
 
                 // find the selected object
                 const selectedObject = intersections[0].object as THREE.Mesh;
+
+                StatusPanel.status = intersections[0].point.x + ", " + intersections[0].point.y + ", " + intersections[0].point.z;
                 
                 // if the selected object is the same as the last selected object, return
                 if (lastSelectedObject && lastSelectedObject.uuid === selectedObject.uuid) return;

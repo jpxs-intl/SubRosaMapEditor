@@ -11,6 +11,7 @@ import DragAndDropHandler from "./misc/dragAndDropHandler";
 import StatsPanel from "./misc/stats";
 import BlockManager from "./managers/blockManager";
 import { MainPanel } from "./controls/sidebar/mainPanel";
+import DynamicLoader from "./managers/dynamicLoader";
 
 export default class Main {
   private static _instance: Main;
@@ -102,6 +103,9 @@ export default class Main {
     StatusPanel.status = "Loading Build Blocks...";
     await BlockManager.instance.loadblocks("buildblock");
 
+    StatusPanel.status = "Loading Round CSX"
+    await DynamicLoader.loadCSX("round")
+
     // this._font = await this._fontLoader.loadAsync("/assets/fonts/helvetiker_regular.typeface.json");
     StatusPanel.status = "Loading enviroment...";
     Enviroment.instance.init();
@@ -112,6 +116,7 @@ export default class Main {
 
     StatsPanel.init();
     MainPanel.init()
+
 
     StatusPanel.status = "Ready";
     console.log("Editor ready!");
